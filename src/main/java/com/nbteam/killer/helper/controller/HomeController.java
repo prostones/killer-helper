@@ -2,13 +2,23 @@ package com.nbteam.killer.helper.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
 
 @Controller
+@RequestMapping("/home")
 public class HomeController {
 
-    @RequestMapping("/home/index")
+    @RequestMapping("/index")
     public String index() {
         return "home/index";
+    }
+
+    @RequestMapping("/admin/index")
+    public String adminIndex() {
+        return "home/admin/index";
+    }
+
+    @RequestMapping("/player/index")
+    public String playerIndex() {
+        return "home/player/index";
     }
 }
