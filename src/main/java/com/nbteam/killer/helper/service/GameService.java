@@ -4,6 +4,12 @@ import com.nbteam.killer.helper.domain.Game;
 
 public interface GameService {
 
+    /**
+     * 上帝创建房间
+     * @param playerTotal
+     * @return
+     * @throws Exception
+     */
     Game create(Integer playerTotal) throws Exception;
 
     /**
@@ -17,5 +23,5 @@ public interface GameService {
      * @param code
      * @param number
      */
-    void coming(String code,Integer number);
+    Game coming(String code,Integer number) throws Exception;
 }
