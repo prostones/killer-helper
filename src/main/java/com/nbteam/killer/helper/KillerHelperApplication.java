@@ -3,7 +3,7 @@ package com.nbteam.killer.helper;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-@SpringBootApplication(scanBasePackages={"com.nbteam.killer.helper"})
+@SpringBootApplication(scanBasePackages = {"com.nbteam.killer.helper"})
 public class KillerHelperApplication {
 
     public static void main(String[] args) {
