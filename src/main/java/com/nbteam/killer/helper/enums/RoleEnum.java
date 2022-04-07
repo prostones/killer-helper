@@ -13,7 +13,6 @@ public enum RoleEnum {
     LIE_REN("猎人", "", true),
     NV_WU("女巫", "", true);
 
-
     String code;
 
     String description;
