@@ -12,7 +12,11 @@ public class GameBook {
 
     String title;
 
-    public GameBook(String title,RoleEnum... rs) {
+    public GameBook(RoleEnum... rs) {
+        Arrays.stream(rs).forEach(r -> players.add(new Player(r)));
+    }
+
+    public GameBook(String title, RoleEnum... rs) {
         this.title = title;
         Arrays.stream(rs).forEach(r -> players.add(new Player(r)));
     }
