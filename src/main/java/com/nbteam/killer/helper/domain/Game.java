@@ -32,6 +32,9 @@ public class Game extends GameBook {
         return code;
     }
 
+    /**
+     * 随机分发座位号
+     */
     public void randomNumber() {
         Set<Integer> numbers = new HashSet<>();
         for (Player p : players) {
