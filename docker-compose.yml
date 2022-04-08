@@ -1,0 +1,21 @@
+version: '3'
+services:
+  redis:
+    image: redis:5.0
+    container_name: redis
+    restart: unless-stopped
+    command: redis-server --appendonly yes
+    environment:
+      TZ: Asia/Shanghai
+      LANG: en_US.UTF-8
+    ports:
+      - "6379:6379"
+
+  killer-helper:
+    image: killer-helper
+    container_name: killer-helper
+    restart: always
+    ports:
+      - "8080:8080"
+
+
