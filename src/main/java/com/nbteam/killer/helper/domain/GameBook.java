@@ -1,31 +1,23 @@
 package com.nbteam.killer.helper.domain;
 
-import cn.hutool.core.util.RandomUtil;
 import com.nbteam.killer.helper.enums.RoleEnum;
 import lombok.Data;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 @Data
 public class GameBook {
 
     public GameBook(RoleEnum... rs) {
         Arrays.stream(rs).forEach(r -> players.add(new Player(r)));
-
-        // 随机分发座位号
-        Set<Integer> numbers = new HashSet<>();
-        for (Player p : players) {
-            Integer number = RandomUtil.randomInt(1, rs.length + 1);
-            while (!numbers.contains(number)) {
-                p.setNumber(number);
-                numbers.add(number);
-            }
-        }
     }
+
+    List<Player> players = new ArrayList<>();
 
     public Integer getTotal() {
         return players.size();
     }
 
-    List<Player> players = new ArrayList<>();
 }

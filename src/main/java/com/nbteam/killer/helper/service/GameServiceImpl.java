@@ -34,7 +34,8 @@ public class GameServiceImpl implements GameService {
 
         Game game = BeanUtil.copyProperties(gameBookRepository.getRandom(playerTotal), Game.class);
         String code = game.getCode();
-        redisTemplate.opsForValue().set(code, JSONUtil.toJsonStr(game));
+        game.randomNumber();
+        redisTemplate.opsForValue().set(String.format(game_key, code), JSONUtil.toJsonStr(game));
         return game;
 
     }
