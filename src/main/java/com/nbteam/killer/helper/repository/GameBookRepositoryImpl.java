@@ -14,8 +14,7 @@ public class GameBookRepositoryImpl implements GameBookRepository {
 
     static {
 
-        // 预女猎 3民 3狼
-        gameBooks.add(new GameBook("预女猎3民3狼",
+        gameBooks.add(new GameBook("预女猎-3民-3狼",
                 RoleEnum.PING_MING, RoleEnum.PING_MING, RoleEnum.PING_MING,
                 RoleEnum.LANG_REN, RoleEnum.LANG_REN, RoleEnum.LANG_REN,
                 RoleEnum.YU_YAN_JIA, RoleEnum.NV_WU, RoleEnum.LIE_REN));
