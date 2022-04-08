@@ -2,22 +2,24 @@ version: '3'
 services:
   redis:
     image: redis:5.0
-    container_name: redis
+    container_name: redis-for-killer
     restart: unless-stopped
     command: redis-server --appendonly yes
     environment:
       TZ: Asia/Shanghai
       LANG: en_US.UTF-8
-    ports:
-      - "6379:6379"
+#    ports:
+#      - "6390:6379"
 
   killer-helper:
-    image: killer-helper
+    image: pro4stones/killer-helper
     container_name: killer-helper
     restart: always
     environment:
       TZ: Asia/Shanghai
       LANG: en_US.UTF-8
+    links:
+      - redis
     ports:
       - "8080:8080"
 
