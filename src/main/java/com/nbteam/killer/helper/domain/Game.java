@@ -14,6 +14,7 @@ public class Game extends GameBook {
 
     /**
      * 随机生成4位number作为房间号
+     *
      * @return
      */
     public String getCode() {

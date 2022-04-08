@@ -6,6 +6,7 @@ public interface GameService {
 
     /**
      * 上帝创建房间
+     *
      * @param playerTotal
      * @return
      * @throws Exception
@@ -14,14 +15,16 @@ public interface GameService {
 
     /**
      * 上帝模式加入
+     *
      * @param code
      */
     Game coming(String code) throws Exception;
 
     /**
      * 玩家模式加入
+     *
      * @param code
      * @param number
      */
-    Game coming(String code,Integer number) throws Exception;
+    Game coming(String code, Integer number) throws Exception;
 }
