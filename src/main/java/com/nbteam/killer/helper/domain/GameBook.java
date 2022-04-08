@@ -10,7 +10,10 @@ import java.util.List;
 @Data
 public class GameBook {
 
-    public GameBook(RoleEnum... rs) {
+    String title;
+
+    public GameBook(String title,RoleEnum... rs) {
+        this.title = title;
         Arrays.stream(rs).forEach(r -> players.add(new Player(r)));
     }
 
