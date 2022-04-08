@@ -10,8 +10,14 @@ public class Player {
         this.role = role;
     }
 
+    /**
+     * 角色
+     */
     RoleEnum role;
 
+    /**
+     * 座位号
+     */
     Integer number;
 
 }

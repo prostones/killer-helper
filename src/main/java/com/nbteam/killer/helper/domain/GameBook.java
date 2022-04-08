@@ -12,6 +12,7 @@ public class GameBook {
     public GameBook(RoleEnum... rs) {
         Arrays.stream(rs).forEach(r -> players.add(new Player(r)));
 
+        // 随机分发座位号
         Set<Integer> numbers = new HashSet<>();
         for (Player p : players) {
             Integer number = RandomUtil.randomInt(1, rs.length + 1);
