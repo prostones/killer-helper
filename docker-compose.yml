@@ -8,19 +8,19 @@ services:
     environment:
       TZ: Asia/Shanghai
       LANG: en_US.UTF-8
-#    ports:
-#      - "6390:6379"
-
-  killer-helper:
-    image: pro4stones/killer-helper
-    container_name: killer-helper
-    restart: always
-    environment:
-      TZ: Asia/Shanghai
-      LANG: en_US.UTF-8
-    links:
-      - redis
     ports:
-      - "8080:8080"
+      - "6379:6379"
+
+#  killer-helper:
+#    image: pro4stones/killer-helper
+#    container_name: killer-helper
+#    restart: always
+#    environment:
+#      TZ: Asia/Shanghai
+#      LANG: en_US.UTF-8
+#    links:
+#      - redis
+#    ports:
+#      - "8080:8080"
 
 

@@ -17,8 +17,18 @@ public class HomeController {
         return "home/admin/index";
     }
 
+    @RequestMapping("/admin/game")
+    public String adminGame() {
+        return "home/admin/game";
+    }
+
     @RequestMapping("/player/index")
     public String playerIndex() {
         return "home/player/index";
+    }
+
+    @RequestMapping("/player/game")
+    public String playerGame() {
+        return "home/player/game";
     }
 }

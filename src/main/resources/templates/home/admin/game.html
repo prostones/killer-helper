@@ -2,10 +2,67 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>标题</title>
+    <title>房间</title>
+    <link rel="stylesheet" href="//unpkg.com/layui@2.6.8/dist/css/layui.css">
 </head>
 <body>
+<div>
+    <span>房间编号<span id="code"></span></span>
+    <span>玩家数量<span id="number"></span></span>
+</div>
 
+<div>
+    <span>房间信息<span id="game"></span></span>
+</div>
 
 </body>
+<script src="//unpkg.com/layui@2.6.8/dist/layui.js"></script>
+<script>
+    layui.use(['jquery'], function () {
+        const $ = layui.$;
+        const url_string = window.location.href;
+        const url = new URL(url_string);
+        const code = url.searchParams.get("code");
+        const number = url.searchParams.get("number");
+
+        if (number != undefined) {
+            $.ajax({
+                url: "../../admin/create/" + number,
+                type: "post",
+                success: function (res) {
+                    console.log(res);
+                    if (res.code == 200) {
+                        console.log("创建房间成功")
+                        $("#code").html(res.result.code);
+                        $("#number").html(res.result.total);
+                        $("#game").html(JSON.stringify(res.result.players));
+                    }
+                }
+            });
+        }
+
+        if (code != undefined) {
+            $.ajax({
+                url: "../../admin/coming/" + code,
+                type: "post",
+                success: function (res) {
+                    console.log(res);
+                    if (res.code == 200) {
+                        console.log("回到房间成功")
+                        $("#code").html(res.result.code);
+                        $("#number").html(res.result.total);
+                        $("#game").html(JSON.stringify(res.result.players));
+                    }
+                }
+            });
+        }
+
+        window.create_room = function () {
+            let number = $("#number").val();
+            window.location = "game?number=" + number;
+        }
+
+    });
+
+</script>
 </html>

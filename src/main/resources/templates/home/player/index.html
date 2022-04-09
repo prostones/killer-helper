@@ -2,15 +2,32 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>标题</title>
+    <title>操作</title>
+    <link rel="stylesheet" href="//unpkg.com/layui@2.6.8/dist/css/layui.css">
 </head>
 <body>
 <div>
-    <span>战局<input/></span>
-    <span>number<input/></span>
-    <a href="game">
-        <button>进入房间</button>
+    <span>房间<input id="code"/></span>
+    <span>座位号<input id="number"/></span>
+    <a>
+        <button onclick="coming_room()">进入房间</button>
     </a>
 </div>
 </body>
+
+<script src="//unpkg.com/layui@2.6.8/dist/layui.js"></script>
+<script>
+    layui.use(['jquery'], function () {
+        var $ = layui.$;
+
+        window.coming_room = function () {
+            let number = $("#number").val();
+            let code = $("#code").val();
+
+            window.location = "game?number=" + number + "&code=" + code;
+        }
+
+    });
+
+</script>
 </html>

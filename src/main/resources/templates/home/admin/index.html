@@ -2,22 +2,41 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>标题</title>
+    <title>选择操作</title>
+    <link rel="stylesheet" href="//unpkg.com/layui@2.6.8/dist/css/layui.css">
 </head>
 <body>
 <div>
-    <span>房间<input/></span>
-    <a href="game">
-        <button>重回房间</button>
+    <span>房间<input id="code"/></span>
+    <a>
+        <button onclick="back_room()">重回房间</button>
     </a>
 </div>
 <br/>
 <div>
-    <span>板子<input/></span>
-    <span>人数<input/></span>
-    <a href="game">
-        <button>创建房间</button>
+    <span>板子<input id=""/></span>
+    <span>人数<input id="number"/></span>
+    <a>
+        <button onclick="create_room()">创建房间</button>
     </a>
 </div>
 </body>
+
+<script src="//unpkg.com/layui@2.6.8/dist/layui.js"></script>
+<script>
+    layui.use(['jquery'], function () {
+        var $ = layui.$;
+
+        window.create_room = function () {
+            let number = $("#number").val();
+            window.location = "game?number=" + number;
+        }
+
+        window.back_room = function () {
+            let code = $("#code").val();
+            window.location = "game?code=" + code;
+        }
+    });
+
+</script>
 </html>

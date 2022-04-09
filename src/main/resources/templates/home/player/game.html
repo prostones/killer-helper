@@ -2,10 +2,51 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>标题</title>
+    <title>房间</title>
+    <link rel="stylesheet" href="//unpkg.com/layui@2.6.8/dist/css/layui.css">
+
 </head>
 <body>
+<span>房间编号<span id="code"></span></span>
+<span>座位号<span id="number"></span></span>
+<span>玩家数量<span id="total"></span></span>
 
+<div>
+    <span>房间信息<span id="game"></span></span>
+</div>
 
 </body>
+<script src="//unpkg.com/layui@2.6.8/dist/layui.js"></script>
+<script>
+    layui.use(['jquery'], function () {
+        const $ = layui.$;
+        const url_string = window.location.href;
+        const url = new URL(url_string);
+        const code = url.searchParams.get("code");
+        const number = url.searchParams.get("number");
+
+        if (code != undefined && number != undefined) {
+            $.ajax({
+                url: "../../player/coming/" + code + "/" + number,
+                type: "post",
+                success: function (res) {
+                    console.log(res);
+                    if (res.code == 200) {
+                        console.log("进入房间成功")
+                        $("#code").html(res.result.code);
+                        $("#number").html(res.result.total);
+                        $("#game").html(JSON.stringify(res.result.players));
+                    }
+                }
+            });
+        }
+
+        window.create_room = function () {
+            let number = $("#number").val();
+            window.location = "game?number=" + number;
+        }
+
+    });
+
+</script>
 </html>
