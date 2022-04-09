@@ -6,7 +6,7 @@
 
 仅用于桌游社团狼人杀游戏，不可替代上帝！！！
 
-![](.readme_images/78bec635.png){:height="50%" width="50%"}
+![](.readme_images/c2fd6.gif)
 
 ### 功能列表
 
