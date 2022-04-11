@@ -1,6 +1,7 @@
 <div align="center">
 
 <h1>狼人杀发牌器</h1>
+
 <p>仅用于桌游社团狼人杀游戏，不可替代上帝！！！</p>
 
 <a target="_blank" href="https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html">
@@ -9,9 +10,11 @@
 <img src="https://img.shields.io/badge/Spring%20Boot-2.5.6-green.svg" >
 <img src="https://img.shields.io/badge/Redis-5.0-red.svg" >
 
-</div>
+---
 
 ![](.readme_images/c2fd6.gif)
+
+</div>
 
 ### 功能列表
 
