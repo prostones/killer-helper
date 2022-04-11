@@ -19,6 +19,11 @@ public class GameBookRepositoryImpl implements GameBookRepository {
                 RoleEnum.LANG_REN, RoleEnum.LANG_REN, RoleEnum.LANG_REN,
                 RoleEnum.YU_YAN_JIA, RoleEnum.NV_WU, RoleEnum.LIE_REN));
 
+        gameBooks.add(new GameBook("预女猎守-4民-4狼",
+                RoleEnum.PING_MING, RoleEnum.PING_MING, RoleEnum.PING_MING, RoleEnum.PING_MING,
+                RoleEnum.LANG_REN, RoleEnum.LANG_REN, RoleEnum.LANG_REN, RoleEnum.LANG_REN,
+                RoleEnum.YU_YAN_JIA, RoleEnum.NV_WU, RoleEnum.LIE_REN, RoleEnum.SHOU_WEI));
+
     }
 
     @Override
