@@ -1,10 +1,12 @@
 package com.nbteam.killer.helper.controller;
 
+import io.swagger.annotations.Api;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 @RequestMapping("/home")
+@Api(tags = "路由相关")
 public class HomeController {
 
     @RequestMapping("/index")

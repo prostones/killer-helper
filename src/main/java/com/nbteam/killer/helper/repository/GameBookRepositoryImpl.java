@@ -38,6 +38,7 @@ public class GameBookRepositoryImpl implements GameBookRepository {
 
     @Override
     public List<GameBook> list() {
+        gameBooks.stream().forEach(book -> book.getPlayers().forEach(p -> p.setNumber(null)));
         return gameBooks;
     }
 }
