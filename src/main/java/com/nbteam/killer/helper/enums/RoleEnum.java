@@ -14,7 +14,12 @@ public enum RoleEnum {
     YU_YAN_JIA("预言家", "每天晚上可以查验一名玩家的身份是好人还是狼人。", true),
     LIE_REN("猎人", "当且仅当猎人被狼人杀害或被投票放逐时，猎人可以亮出自己的身份牌并指定枪杀一名玩家，被女巫毒杀则无法发动技能。", true),
     NV_WU("女巫", "女巫拥有两瓶药，解药可以救活一名当晚被狼人杀害的玩家，毒药可以毒杀一名玩家，女巫每天晚上最多使用一瓶药，女巫不可自救。", true),
-    SHOU_WEI("守卫","",true);
+    SHOU_WEI("守卫", "", true),
+    BAI_CHI("白痴", "", true),
+    QIU_BI_TE("丘比特", "", true),
+    LAO_LIU_MANG("老流氓", "", true),
+    ZHA_DAN_REN("炸弹人", "", true),
+    BAI_LANG_WANG("白狼王", "", false);
 
     String code;
 

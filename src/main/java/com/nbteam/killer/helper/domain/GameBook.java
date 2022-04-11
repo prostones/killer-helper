@@ -1,5 +1,6 @@
 package com.nbteam.killer.helper.domain;
 
+import cn.hutool.core.util.StrUtil;
 import com.nbteam.killer.helper.enums.RoleEnum;
 import lombok.Data;
 
@@ -26,7 +27,12 @@ public class GameBook implements Serializable {
     }
 
     public String getId() {
-        return UUID.randomUUID().toString().replace("-", "").toLowerCase();
+
+        if (StrUtil.isBlankOrUndefined(id)) {
+            id = UUID.randomUUID().toString().replace("-", "").toLowerCase();
+        }
+
+        return id;
     }
 
     List<Player> players = new ArrayList<>();
