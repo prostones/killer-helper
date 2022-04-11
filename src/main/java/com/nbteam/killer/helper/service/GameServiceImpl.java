@@ -41,6 +41,15 @@ public class GameServiceImpl implements GameService {
     }
 
     @Override
+    public Game create(String id) throws Exception {
+        Game game = BeanUtil.copyProperties(gameBookRepository.getById(id), Game.class);
+        String code = game.getCode();
+        game.randomNumber();
+        redisTemplate.opsForValue().set(String.format(game_key, code), JSONUtil.toJsonStr(game));
+        return game;
+    }
+
+    @Override
     public synchronized Game coming(String code) throws Exception {
         String json = redisTemplate.opsForValue().get(String.format(game_key, code));
         if (StrUtil.isBlankOrUndefined(json)) {

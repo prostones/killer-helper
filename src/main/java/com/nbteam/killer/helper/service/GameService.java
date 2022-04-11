@@ -14,6 +14,14 @@ public interface GameService {
     Game create(Integer playerTotal) throws Exception;
 
     /**
+     * 通过板子id创建房间
+     *
+     * @param id
+     * @return
+     */
+    Game create(String id) throws Exception;
+
+    /**
      * 上帝模式加入
      *
      * @param code

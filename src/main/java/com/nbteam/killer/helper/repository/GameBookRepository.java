@@ -2,6 +2,8 @@ package com.nbteam.killer.helper.repository;
 
 import com.nbteam.killer.helper.domain.GameBook;
 
+import java.util.List;
+
 public interface GameBookRepository {
 
     /**
@@ -12,4 +14,19 @@ public interface GameBookRepository {
      * @throws Exception
      */
     GameBook getRandom(Integer playerTotal) throws Exception;
+
+    /**
+     * 通过板子id创建板子
+     *
+     * @param id
+     * @return
+     */
+    GameBook getById(String id) throws Exception;
+
+    /**
+     * 获取板子集合
+     *
+     * @return
+     */
+    List<GameBook> list();
 }

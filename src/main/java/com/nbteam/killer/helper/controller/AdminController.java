@@ -21,10 +21,17 @@ public class AdminController {
         return Result.ok();
     }
 
-    @PostMapping("/create/{playerTotal}")
-    @ApiOperation("创建房间")
-    public Result<?> create(@PathVariable Integer playerTotal) throws Exception {
-        Game game = gameService.create(playerTotal);
+    @PostMapping("/create/{total}")
+    @ApiOperation("创建房间，使用玩家数量，随机获取对应人数的板子")
+    public Result<?> create(@PathVariable Integer total) throws Exception {
+        Game game = gameService.create(total);
+        return Result.ok(game);
+    }
+
+    @PostMapping("/create/by/{gameBookId}")
+    @ApiOperation("创建房间,使用板子id")
+    public Result<?> create(@PathVariable("gameBookId") String gameBookId) throws Exception {
+        Game game = gameService.create(gameBookId);
         return Result.ok(game);
     }
 

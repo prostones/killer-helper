@@ -30,4 +30,14 @@ public class GameBookRepositoryImpl implements GameBookRepository {
     public GameBook getRandom(Integer playerTotal) throws Exception {
         return gameBooks.stream().filter(book -> book.getTotal().equals(playerTotal)).findAny().orElseThrow(() -> new Exception("错误：不支持的玩家数量"));
     }
+
+    @Override
+    public GameBook getById(String id) throws Exception {
+        return gameBooks.stream().filter(book -> book.getId().equals(id)).findAny().orElseThrow(() -> new Exception(String.format("错误：无法通过id[%s]找到板子", id)));
+    }
+
+    @Override
+    public List<GameBook> list() {
+        return gameBooks;
+    }
 }
