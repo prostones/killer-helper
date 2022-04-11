@@ -20,13 +20,16 @@
 2. 上帝控制倒牌
 3. 投票统计
 
+### 丝袜哥
+
+[http://localhost:8080/swagger-ui.html](http://localhost:8080/swagger-ui.html)
+
 ### 录本的朋友请前往
 
 ```
 => com.nbteam.killer.helper.enums.RoleEnum // 增加角色
 => com.nbteam.killer.helper.repository.GameBookRepositoryImpl // 增加板子
 ```
-
 
 
 
