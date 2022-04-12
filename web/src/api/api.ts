@@ -1,4 +1,5 @@
 import request from '@/utils/request'
+
 enum Api {
   GetTreeList = '/data/form/tree'
 }

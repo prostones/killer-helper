@@ -1,5 +1,5 @@
 import axios from 'axios'
-import { Toast } from 'vant'
+import {Toast} from 'vant'
 
 // axios.defaults.headers.common['Content-Type'] = 'application/json'
 // axios.defaults.headers.common['area-code'] = 'CWHT'
