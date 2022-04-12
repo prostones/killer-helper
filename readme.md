@@ -1,12 +1,20 @@
-## 狼人杀发牌器
+<div align="center">
+
+<h1>狼人杀发牌器</h1>
+
+<p>仅用于桌游社团狼人杀游戏，不可替代上帝！！！</p>
 
 <a target="_blank" href="https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html">
     <img src="https://img.shields.io/badge/JDK-8+-green.svg" />
 </a>
+<img src="https://img.shields.io/badge/Spring%20Boot-2.5.6-green.svg" >
+<img src="https://img.shields.io/badge/Redis-5.0-red.svg" >
 
-仅用于桌游社团狼人杀游戏，不可替代上帝！！！
+---
 
 ![](.readme_images/c2fd6.gif)
+
+</div>
 
 ### 功能列表
 
@@ -16,9 +24,10 @@
 
 ### 计划功能
 
-1. 完成前段工作
-2. 上帝控制倒牌
-3. 投票统计
+* 完成前段工作
+* 增加角色卡片图片
+* 上帝控制倒牌
+* 投票统计
 
 ### 丝袜哥
 
