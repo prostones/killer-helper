@@ -19,6 +19,8 @@ public enum RoleEnum {
     QIU_BI_TE("丘比特", "", true),
     LAO_LIU_MANG("老流氓", "", true),
     ZHA_DAN_REN("炸弹人", "", true),
+    YE_HAI_ZI("野孩子","",true),
+    ZHOU_HU("咒狐","",true),
     BAI_LANG_WANG("白狼王", "", false);
 
     String code;
