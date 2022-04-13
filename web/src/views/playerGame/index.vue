@@ -36,7 +36,7 @@ async function coming(code: string, number: string) {
   if (res.status === 500) {
 
   } else {
-    detail.value = res.result
+    detail.value = res.data
   }
 }
 </script>

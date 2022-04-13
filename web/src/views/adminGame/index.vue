@@ -39,7 +39,7 @@ async function create(total: string) {
   if (res.status === 500) {
 
   } else {
-    detail.value = res.result
+    detail.value = res.data
   }
 }
 async function back(code: string) {
@@ -47,7 +47,7 @@ async function back(code: string) {
   if (res.status === 500) {
 
   } else {
-    detail.value = res.result
+    detail.value = res.data
   }
 }
 </script>

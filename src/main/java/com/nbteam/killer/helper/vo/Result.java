@@ -28,13 +28,13 @@ public class Result<T> implements Serializable {
      * 返回代码
      */
     @ApiModelProperty(value = "返回代码")
-    private Integer code = 0;
+    private Integer status = 0;
 
     /**
      * 返回数据对象 data
      */
     @ApiModelProperty(value = "返回数据对象")
-    private T result;
+    private T data;
 
     /**
      * 时间戳
@@ -48,7 +48,7 @@ public class Result<T> implements Serializable {
 
     public Result<T> success(String message) {
         this.message = message;
-        this.code = 200;
+        this.status = 200;
         this.success = true;
         return this;
     }
@@ -57,7 +57,7 @@ public class Result<T> implements Serializable {
     public static Result<Object> ok() {
         Result<Object> r = new Result<Object>();
         r.setSuccess(true);
-        r.setCode(200);
+        r.setStatus(200);
         r.setMessage("成功");
         return r;
     }
@@ -65,16 +65,16 @@ public class Result<T> implements Serializable {
     public static Result<Object> ok(String msg) {
         Result<Object> r = new Result<Object>();
         r.setSuccess(true);
-        r.setCode(200);
-        r.setResult(msg);
+        r.setStatus(200);
+        r.setData(msg);
         return r;
     }
 
     public static <T> Result<T> ok(T data) {
         Result<T> r = new Result<>();
         r.setSuccess(true);
-        r.setCode(200);
-        r.setResult(data);
+        r.setStatus(200);
+        r.setData(data);
         return r;
     }
 
@@ -84,7 +84,7 @@ public class Result<T> implements Serializable {
 
     public static Result<Object> error(int code, String msg) {
         Result<Object> r = new Result<Object>();
-        r.setCode(code);
+        r.setStatus(code);
         r.setMessage(msg);
         r.setSuccess(false);
         return r;
@@ -92,7 +92,7 @@ public class Result<T> implements Serializable {
 
     public Result<T> error500(String message) {
         this.message = message;
-        this.code = 500;
+        this.status = 500;
         this.success = false;
         return this;
     }
