@@ -15,7 +15,7 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { Field, CellGroup } from 'vant';
 import { useRouter } from 'vue-router'
 import {ref} from 'vue'

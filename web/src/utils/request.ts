@@ -13,6 +13,7 @@ const errorHandler = (error: any) => {
   if (error.response) {
     const data = error.response.data
     Toast(data.message)
+    return error.response.data
   }
   return Promise.reject(error)
 }
@@ -27,7 +28,7 @@ request.interceptors.request.use((config) => {
 
 // response interceptor
 request.interceptors.response.use((response) => {
-  return response
+  return response.data
 }, errorHandler)
 
 export default request
