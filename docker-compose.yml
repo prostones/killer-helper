@@ -13,6 +13,7 @@ services:
 
   killer-helper:
     image: pro4stones/killer-helper
+    pull_policy: always
     container_name: killer-helper
     restart: always
     environment:
@@ -27,6 +28,7 @@ services:
 
   killer-web:
     image: pro4stones/killer-web
+    pull_policy: always
     container_name: killer-web
     restart: always
     links:
