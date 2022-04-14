@@ -26,7 +26,6 @@
           :columns="columns"
           @confirm="onConfirm"
           @cancel="showPicker = false"
-          :columns-field-names="{text: 'title'}"
         />
       </Popup>
     </CellGroup>
@@ -61,6 +60,9 @@ async function getGameBook() {
   console.log('res', res);
   
   if(res.status===200) {
+    res.data.forEach((r: { id: string; text: string; total: any; title: any }) => {
+      r.text = `(${r.total})${r.title}`
+    })
     columns.value = res.data
   } else {
     columns.value = []
