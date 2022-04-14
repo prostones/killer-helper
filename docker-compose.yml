@@ -2,14 +2,14 @@ version: '3'
 services:
   redis:
     image: redis:5.0
-    container_name: redis-for-killer
+    container_name: redis
     restart: unless-stopped
     command: redis-server --appendonly yes
     environment:
       TZ: Asia/Shanghai
       LANG: en_US.UTF-8
-    ports:
-      - "6379:6379"
+#    ports:
+#      - "6379:6379"
 
   killer-helper:
     image: pro4stones/killer-helper
@@ -20,20 +20,24 @@ services:
       LANG: en_US.UTF-8
     links:
       - redis
+    depends_on:
+      - redis
     ports:
       - "8080:8080"
 
-  killer-web:
-    image: pro4stones/killer-web
-    container_name: killer-web
-    restart: always
-    links:
-      - killer-helper
-    environment:
-      TZ: Asia/Shanghai
-      LANG: en_US.UTF-8
-    ports:
-      - "80:80"
+#  killer-web:
+#    image: pro4stones/killer-web
+#    container_name: killer-web
+#    restart: always
+#    links:
+#      - killer-helper
+#    depends_on:
+#      - killer-helper
+#    environment:
+#      TZ: Asia/Shanghai
+#      LANG: en_US.UTF-8
+#    ports:
+#      - "80:80"
 
 
 

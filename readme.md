@@ -8,7 +8,9 @@
     <img src="https://img.shields.io/badge/JDK-8+-green.svg" />
 </a>
 <img src="https://img.shields.io/badge/Spring%20Boot-2.5.6-green.svg" >
-<img src="https://img.shields.io/badge/Redis-5.0-red.svg" >
+<img src="https://img.shields.io/badge/Redis-5.0-green.svg" >
+<img src="https://img.shields.io/badge/npm-6.14-green.svg" >
+
 
 ---
 
@@ -39,6 +41,7 @@
 => com.nbteam.killer.helper.enums.RoleEnum // 增加角色
 => com.nbteam.killer.helper.repository.GameBookRepositoryImpl // 增加板子
 ```
+
 
 
 

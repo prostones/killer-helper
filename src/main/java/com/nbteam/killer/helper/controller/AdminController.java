@@ -5,12 +5,14 @@ import com.nbteam.killer.helper.service.GameService;
 import com.nbteam.killer.helper.vo.Result;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/admin")
 @Api(tags = "上帝相关")
+@Slf4j
 public class AdminController {
 
     @Autowired
@@ -24,6 +26,9 @@ public class AdminController {
     @PostMapping("/create/{total}")
     @ApiOperation("创建房间，使用玩家数量，随机获取对应人数的板子")
     public Result<?> create(@PathVariable Integer total) throws Exception {
+
+        log.info("收到创建房间请求");
+
         Game game = gameService.create(total);
         return Result.ok(game);
     }
