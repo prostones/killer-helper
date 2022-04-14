@@ -36,39 +36,39 @@ public class GameBookRepositoryImpl implements GameBookRepository {
                 RoleEnum.YU_YAN_JIA, RoleEnum.NV_WU, RoleEnum.LIE_REN));
 
         // 12人
-        gameBooks.add(new GameBook("1个预言家|1个女巫|1个猎人|1个守卫|4民|4狼",
+        gameBooks.add(new GameBook("预|女巫|猎人|守卫|4民|4狼",
                 RoleEnum.PING_MING, RoleEnum.PING_MING, RoleEnum.PING_MING, RoleEnum.PING_MING,
                 RoleEnum.LANG_REN, RoleEnum.LANG_REN, RoleEnum.LANG_REN, RoleEnum.LANG_REN,
                 RoleEnum.YU_YAN_JIA, RoleEnum.NV_WU, RoleEnum.LIE_REN, RoleEnum.SHOU_WEI));
 
-        gameBooks.add(new GameBook("4平民|3狼人|1个预言家|1个女巫|1个猎人|1个守卫|1个白狼王",
+        gameBooks.add(new GameBook("4民|3狼|预|女巫|猎人|守卫|白狼王",
                 RoleEnum.PING_MING, RoleEnum.PING_MING, RoleEnum.PING_MING, RoleEnum.PING_MING,
                 RoleEnum.LANG_REN, RoleEnum.LANG_REN, RoleEnum.LANG_REN, RoleEnum.BAI_LANG_WANG,
                 RoleEnum.YU_YAN_JIA, RoleEnum.NV_WU, RoleEnum.LIE_REN, RoleEnum.SHOU_WEI));
 
-        gameBooks.add(new GameBook("4平民|4狼人|1个预言家|1个女巫|1个猎人|1个白痴",
+        gameBooks.add(new GameBook("4民|4狼|预|女巫|猎人|白痴",
                 RoleEnum.PING_MING, RoleEnum.PING_MING, RoleEnum.PING_MING, RoleEnum.PING_MING,
                 RoleEnum.LANG_REN, RoleEnum.LANG_REN, RoleEnum.LANG_REN, RoleEnum.LANG_REN,
                 RoleEnum.YU_YAN_JIA, RoleEnum.NV_WU, RoleEnum.LIE_REN, RoleEnum.BAI_CHI));
 
-        gameBooks.add(new GameBook("4平民|4狼人|1个预言家|1个女巫|1个猎人|1个丘比特",
+        gameBooks.add(new GameBook("4民|4狼|预|女巫|猎人|丘比特",
                 RoleEnum.PING_MING, RoleEnum.PING_MING, RoleEnum.PING_MING, RoleEnum.PING_MING,
                 RoleEnum.LANG_REN, RoleEnum.LANG_REN, RoleEnum.LANG_REN, RoleEnum.LANG_REN,
                 RoleEnum.YU_YAN_JIA, RoleEnum.NV_WU, RoleEnum.LIE_REN, RoleEnum.QIU_BI_TE));
 
-        gameBooks.add(new GameBook("3平民|3狼人|1个预言家|1个女巫|1个猎人|1个咒狐|1个野孩子|1个白痴",
+        gameBooks.add(new GameBook("3民|3狼|预|女巫|猎人|咒狐|野孩子|白痴",
                 RoleEnum.PING_MING, RoleEnum.PING_MING, RoleEnum.PING_MING, RoleEnum.BAI_CHI,
                 RoleEnum.LANG_REN, RoleEnum.LANG_REN, RoleEnum.LANG_REN, RoleEnum.YE_HAI_ZI,
                 RoleEnum.YU_YAN_JIA, RoleEnum.NV_WU, RoleEnum.LIE_REN, RoleEnum.ZHOU_HU));
 
         // 13人
-        gameBooks.add(new GameBook("4平民|4狼人|1个预言家|1个女巫|1个猎人|1个白痴|1个老流氓",
+        gameBooks.add(new GameBook("4民|4狼|预|女巫|猎人|白痴|老流氓",
                 RoleEnum.PING_MING, RoleEnum.PING_MING, RoleEnum.PING_MING, RoleEnum.PING_MING,
                 RoleEnum.LANG_REN, RoleEnum.LANG_REN, RoleEnum.LANG_REN, RoleEnum.LANG_REN,
                 RoleEnum.YU_YAN_JIA, RoleEnum.NV_WU, RoleEnum.LIE_REN, RoleEnum.BAI_CHI, RoleEnum.LAO_LIU_MANG));
 
         // 14人
-        gameBooks.add(new GameBook("4平民|4狼人|1个预言家|1个女巫|1个猎人|1个白痴|1个老流氓|1个炸弹人",
+        gameBooks.add(new GameBook("4民|4狼|预|女巫|猎人|白痴|老流氓|炸弹人",
                 RoleEnum.PING_MING, RoleEnum.PING_MING, RoleEnum.PING_MING, RoleEnum.PING_MING,
                 RoleEnum.LANG_REN, RoleEnum.LANG_REN, RoleEnum.LANG_REN, RoleEnum.LANG_REN,
                 RoleEnum.YU_YAN_JIA, RoleEnum.NV_WU, RoleEnum.LIE_REN, RoleEnum.BAI_CHI, RoleEnum.LAO_LIU_MANG, RoleEnum.ZHA_DAN_REN));
