@@ -25,19 +25,19 @@ services:
     ports:
       - "8080:8080"
 
-#  killer-web:
-#    image: pro4stones/killer-web
-#    container_name: killer-web
-#    restart: always
-#    links:
-#      - killer-helper
-#    depends_on:
-#      - killer-helper
-#    environment:
-#      TZ: Asia/Shanghai
-#      LANG: en_US.UTF-8
-#    ports:
-#      - "80:80"
+  killer-web:
+    image: pro4stones/killer-web
+    container_name: killer-web
+    restart: always
+    links:
+      - killer-helper
+    depends_on:
+      - killer-helper
+    environment:
+      TZ: Asia/Shanghai
+      LANG: en_US.UTF-8
+    ports:
+      - "80:80"
 
 
 
