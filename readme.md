@@ -42,6 +42,10 @@
 => com.nbteam.killer.helper.repository.GameBookRepositoryImpl // 增加板子
 ```
 
+```
+docker stack deploy -c docker-compose.yml k
 
+docker-compose pull
+docker-compose up -d
 
-
+```
