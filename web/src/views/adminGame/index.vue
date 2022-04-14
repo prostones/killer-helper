@@ -15,7 +15,7 @@
 import { useRouter } from 'vue-router'
 import { reactive, ref } from 'vue'
 import { CellGroup, Field } from 'vant'
-import { createRoom, backRoom } from '@/api/api'
+import { createRoom, backRoom, createByGameBookId } from '@/api/api'
 import { Game } from '@/types/admin/index'
 const detail = ref<Game>({
   id: '',
@@ -26,16 +26,26 @@ const detail = ref<Game>({
 });
 
 const router = useRouter()
-const { code, number } = router.currentRoute.value.query
+const { code, number, gameBookId } = router.currentRoute.value.query
 
 if (number) {
   create(number.toString())
 } else if (code) {
   back(code.toString())
+} else if (gameBookId) {
+  create2(gameBookId.toString());
 }
 
 async function create(total: string) {
   const res = await createRoom(total)
+  if (res.status === 500) {
+
+  } else {
+    detail.value = res.data
+  }
+}
+async function create2(id: string) {
+  const res = await createByGameBookId(id)
   if (res.status === 500) {
 
   } else {

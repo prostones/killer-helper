@@ -11,16 +11,30 @@ services:
     ports:
       - "6379:6379"
 
-#  killer-helper:
-#    image: pro4stones/killer-helper
-#    container_name: killer-helper
-#    restart: always
-#    environment:
-#      TZ: Asia/Shanghai
-#      LANG: en_US.UTF-8
-#    links:
-#      - redis
-#    ports:
-#      - "8080:8080"
+  killer-helper:
+    image: pro4stones/killer-helper
+    container_name: killer-helper
+    restart: always
+    environment:
+      TZ: Asia/Shanghai
+      LANG: en_US.UTF-8
+    links:
+      - redis
+    ports:
+      - "8080:8080"
+
+  killer-web:
+    image: pro4stones/killer-web
+    container_name: killer-web
+    restart: always
+    links:
+      - killer-helper
+    environment:
+      TZ: Asia/Shanghai
+      LANG: en_US.UTF-8
+    ports:
+      - "80:80"
+
+
 
 
