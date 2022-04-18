@@ -27,7 +27,7 @@ public enum RoleEnum {
     SHI_XIANG_GUI("石像鬼", "", false, ""),
     DAO_ZEI("盗贼", "", false, ""),
     QI_JI_SHANG_REN("奇迹商人", "", true, ""),
-    MENG_MEI("梦魇","",false,""),
+    MENG_YAN("梦魇","",false,""),
     BAI_LANG_WANG("白狼王", "", false, "");
 
     /**
