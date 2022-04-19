@@ -6,6 +6,6 @@ MAINTAINER nbteam
 ADD target/killer-helper.jar /killer-helper.jar
 
 # 镜像要暴露的端口
-EXPOSE 8080 8080
+EXPOSE 8080
 # 在镜像运行为容器后执行的命令
-ENTRYPOINT ["java","-jar","/killer-helper.jar"]
+ENTRYPOINT ["java","-jar","-Xmx512m","/killer-helper.jar"]

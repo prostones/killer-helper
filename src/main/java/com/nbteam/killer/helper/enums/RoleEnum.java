@@ -27,8 +27,19 @@ public enum RoleEnum {
     SHI_XIANG_GUI("石像鬼", "", false, ""),
     DAO_ZEI("盗贼", "", false, ""),
     QI_JI_SHANG_REN("奇迹商人", "", true, ""),
-    MENG_YAN("梦魇","",false,""),
-    BAI_LANG_WANG("白狼王", "", false, "");
+    MENG_YAN("梦魇", "", false, ""),
+    BAI_LANG_WANG("白狼王", "", false, ""),
+    MO_SHU_SHI("魔术师", "", false, ""),
+
+
+    LANG("狼", "", true, ""),
+    MEI("美", "", true, ""),
+    YANG_TUO("羊驼", "", true, ""),
+    BAI_MAO("白猫", "", true, ""),
+    HE_TUN("河豚", "", true, ""),
+    ZI_HU("子狐", "", true, ""),
+    XIONG("熊", "", true, "");
+
 
     /**
      * 名称

@@ -89,6 +89,25 @@ public class GameBookRepositoryImpl implements GameBookRepository {
                 RoleEnum.LANG_REN, RoleEnum.LANG_REN, RoleEnum.LANG_REN, RoleEnum.LANG_REN,
                 RoleEnum.YU_YAN_JIA, RoleEnum.NV_WU, RoleEnum.LIE_REN, RoleEnum.BAI_CHI, RoleEnum.LAO_LIU_MANG, RoleEnum.ZHA_DAN_REN));
 
+        // 15人
+        gameBooks.add(new GameBook("预|女|猎|白|魔|4狼|1狼王|5民",
+                RoleEnum.PING_MING, RoleEnum.PING_MING, RoleEnum.PING_MING, RoleEnum.PING_MING, RoleEnum.PING_MING,
+                RoleEnum.LANG_REN, RoleEnum.LANG_REN, RoleEnum.LANG_REN, RoleEnum.LANG_REN,
+                RoleEnum.BAI_LANG_WANG,
+                RoleEnum.YU_YAN_JIA, RoleEnum.NV_WU, RoleEnum.LIE_REN, RoleEnum.BAI_CHI, RoleEnum.MO_SHU_SHI));
+
+        // 动物梦境
+        // 10人
+        gameBooks.add(new GameBook("2狼|美|4羊|豚|狐|熊",
+                RoleEnum.LANG, RoleEnum.LANG,
+                RoleEnum.MEI, RoleEnum.HE_TUN, RoleEnum.ZI_HU, RoleEnum.XIONG,
+                RoleEnum.YANG_TUO, RoleEnum.YANG_TUO, RoleEnum.YANG_TUO, RoleEnum.YANG_TUO));
+
+        // 12人
+        gameBooks.add(new GameBook("3狼|美|4羊|白|豚|狐|熊",
+                RoleEnum.LANG, RoleEnum.LANG, RoleEnum.LANG,
+                RoleEnum.MEI, RoleEnum.BAI_MAO, RoleEnum.HE_TUN, RoleEnum.ZI_HU, RoleEnum.XIONG,
+                RoleEnum.YANG_TUO, RoleEnum.YANG_TUO, RoleEnum.YANG_TUO, RoleEnum.YANG_TUO));
     }
 
     @Override
