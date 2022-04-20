@@ -3,7 +3,7 @@ services:
   redis:
     image: redis:5.0
     container_name: redis
-    restart: unless-stopped
+    restart: always
     command: redis-server --appendonly yes
     environment:
       TZ: Asia/Shanghai
@@ -13,7 +13,6 @@ services:
 
   killer-helper:
     image: pro4stones/killer-helper
-    pull_policy: always
     container_name: killer-helper
     restart: always
     environment:
@@ -28,9 +27,11 @@ services:
 
   killer-web:
     image: pro4stones/killer-web
-    pull_policy: always
-    container_name: killer-web
+    #    pull_policy: always
+    #    container_name: killer-web
     restart: always
+    deploy:
+      replicas: 2
     links:
       - killer-helper
     depends_on:
