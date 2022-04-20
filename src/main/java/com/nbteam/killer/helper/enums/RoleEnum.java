@@ -30,7 +30,8 @@ public enum RoleEnum {
     MENG_YAN("梦魇", "", false, ""),
     BAI_LANG_WANG("白狼王", "", false, ""),
     MO_SHU_SHI("魔术师", "", false, ""),
-
+    CHUN_BAI_ZHI_NV("纯白之女","",true,""),
+    LANG_WU("狼巫", "", true, ""),
 
     LANG("狼", "", true, ""),
     MEI("美", "", true, ""),
