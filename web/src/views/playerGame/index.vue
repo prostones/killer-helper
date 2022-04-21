@@ -6,6 +6,7 @@
       </CellGroup>
       <CellGroup inset v-for="player in detail.players" >
         <Field :label="'座位号'+player.number" v-model="player.role.code" readonly></Field>
+        <Field :label="'角色描述'" v-model="player.role.description" readonly></Field>
       </CellGroup>
   </div>
 </template>
