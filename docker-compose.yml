@@ -28,10 +28,10 @@ services:
   killer-web:
     image: pro4stones/killer-web
     #    pull_policy: always
-    #    container_name: killer-web
+    container_name: killer-web
     restart: always
-    deploy:
-      replicas: 2
+#    deploy:
+#      replicas: 2
     links:
       - killer-helper
     depends_on:
