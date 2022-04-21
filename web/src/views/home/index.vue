@@ -1,6 +1,8 @@
 <template>
   <div class="home">
-    <div style="height:40%"></div>
+    <div class="panel-top">
+      <img src="@/assets/home.png" alt="">
+    </div>
     <Row gutter="20" justify="center">
       <Col span="12" style="text-align:center">
         <van-button round  plain type="primary" size="normal" to="admin">我是上帝</van-button>
@@ -12,7 +14,7 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { Col, Row } from 'vant';
 
 </script>
@@ -20,5 +22,12 @@ import { Col, Row } from 'vant';
 <style lang="less" scoped>
 .home{
   height: 100%;
+  .panel-top{
+    height: 75%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
 }
 </style>
