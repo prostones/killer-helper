@@ -32,6 +32,8 @@ public enum RoleEnum {
     MO_SHU_SHI("魔术师", "", false, ""),
     CHUN_BAI_ZHI_NV("纯白之女","",true,""),
     LANG_WU("狼巫", "", true, ""),
+    QIAN_XING_ZHE("潜行者","",true,""),
+    JIN_YAN_ZHANG_LAO("禁言长老","",true,""),
 
     LANG("狼", "", true, ""),
     MEI("美", "", true, ""),
