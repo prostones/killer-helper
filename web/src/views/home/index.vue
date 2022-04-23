@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <div class="panel-top">
-      <img src="@/assets/home.png" alt="">
+      <img src="@/assets/home.gif" alt="图片加载中">
     </div>
     <Row gutter="20" justify="center">
       <Col span="12" style="text-align:center">
