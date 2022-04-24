@@ -6,17 +6,19 @@
         <Field label="总人数" v-model="detail.total" readonly></Field>
       </CellGroup>
       <CellGroup inset v-for="player in detail.players">
-        <Field :label="'座位号'+player.number" v-model="player.role.code" readonly></Field>
+        <Field :label="'座位号'+player.number" :error="player.role.goodMan == false" :label-class="player.role.goodMan == false? 'error-font':''"
+               v-model="player.role.code" readonly></Field>
       </CellGroup>
   </div>
 </template>
 
 <script setup lang="ts">
 import { useRouter } from 'vue-router'
-import { reactive, ref } from 'vue'
+import { ref } from 'vue'
 import { CellGroup, Field } from 'vant'
 import { createRoom, backRoom, createByGameBookId } from '@/api/api'
 import { Game } from '@/types/admin/index'
+
 const detail = ref<Game>({
   id: '',
   code: '',
@@ -63,5 +65,7 @@ async function back(code: string) {
 </script>
 
 <style>
-
+.error-font{
+  color: var(--van-field-input-error-text-color);
+}
 </style>
