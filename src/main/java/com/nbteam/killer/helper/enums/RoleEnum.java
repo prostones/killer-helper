@@ -29,7 +29,7 @@ public enum RoleEnum {
     QI_JI_SHANG_REN("奇迹商人", "", true, ""),
     MENG_YAN("梦魇", "", false, ""),
     BAI_LANG_WANG("白狼王", "", false, ""),
-    MO_SHU_SHI("魔术师", "", false, ""),
+    MO_SHU_SHI("魔术师", "", true, ""),
     CHUN_BAI_ZHI_NV("纯白之女","",true,""),
     LANG_WU("狼巫", "", true, ""),
     QIAN_XING_ZHE("潜行者","",true,""),
