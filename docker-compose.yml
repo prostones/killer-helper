@@ -8,39 +8,39 @@ services:
     environment:
       TZ: Asia/Shanghai
       LANG: en_US.UTF-8
-#    ports:
-#      - "6379:6379"
-
-  killer-helper:
-    image: pro4stones/killer-helper
-    container_name: killer-helper
-    restart: always
-    environment:
-      TZ: Asia/Shanghai
-      LANG: en_US.UTF-8
-    links:
-      - redis
-    depends_on:
-      - redis
-#    ports:
-#      - "8080:8080"
-
-  killer-web:
-    image: pro4stones/killer-web
-    #    pull_policy: always
-    container_name: killer-web
-    restart: always
-#    deploy:
-#      replicas: 2
-    links:
-      - killer-helper
-    depends_on:
-      - killer-helper
-    environment:
-      TZ: Asia/Shanghai
-      LANG: en_US.UTF-8
     ports:
-      - "80:80"
+      - "6379:6379"
+
+#  killer-helper:
+#    image: pro4stones/killer-helper
+#    container_name: killer-helper
+#    restart: always
+#    environment:
+#      TZ: Asia/Shanghai
+#      LANG: en_US.UTF-8
+#    links:
+#      - redis
+#    depends_on:
+#      - redis
+##    ports:
+##      - "8080:8080"
+#
+#  killer-web:
+#    image: pro4stones/killer-web
+#    #    pull_policy: always
+#    container_name: killer-web
+#    restart: always
+##    deploy:
+##      replicas: 2
+#    links:
+#      - killer-helper
+#    depends_on:
+#      - killer-helper
+#    environment:
+#      TZ: Asia/Shanghai
+#      LANG: en_US.UTF-8
+#    ports:
+#      - "80:80"
 
 
 
