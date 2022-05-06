@@ -1,3 +1,8 @@
+app:
+  version: @project.version@
+  build:
+    time: @timestamp@
+
 spring:
   redis:
     host: redis
