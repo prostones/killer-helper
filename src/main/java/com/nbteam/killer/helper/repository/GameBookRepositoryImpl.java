@@ -112,6 +112,20 @@ public class GameBookRepositoryImpl implements GameBookRepository {
                 RoleEnum.BAI_LANG_WANG,
                 RoleEnum.YU_YAN_JIA, RoleEnum.NV_WU, RoleEnum.LIE_REN, RoleEnum.BAI_CHI, RoleEnum.MO_SHU_SHI));
 
+        gameBooks.add(new GameBook("纯|女|守|猎|白|4狼|1狼巫|5民",
+                RoleEnum.PING_MING, RoleEnum.PING_MING, RoleEnum.PING_MING, RoleEnum.PING_MING, RoleEnum.PING_MING,
+                RoleEnum.LANG_REN, RoleEnum.LANG_REN, RoleEnum.LANG_REN, RoleEnum.LANG_REN,
+                RoleEnum.LANG_WU,
+                RoleEnum.CHUN_BAI_ZHI_NV, RoleEnum.NV_WU, RoleEnum.SHOU_WEI, RoleEnum.LIE_REN, RoleEnum.BAI_CHI
+        ));
+
+        gameBooks.add(new GameBook("预|女|猎|白|骑|4狼|1狼美人|5民",
+                RoleEnum.PING_MING, RoleEnum.PING_MING, RoleEnum.PING_MING, RoleEnum.PING_MING, RoleEnum.PING_MING,
+                RoleEnum.LANG_REN, RoleEnum.LANG_REN, RoleEnum.LANG_REN, RoleEnum.LANG_REN,
+                RoleEnum.LANG_MEI_REN,
+                RoleEnum.YU_YAN_JIA, RoleEnum.NV_WU, RoleEnum.LIE_REN, RoleEnum.BAI_CHI, RoleEnum.QI_SHI
+        ));
+
         // 动物梦境
         // 10人
         gameBooks.add(new GameBook("2狼|美|4羊|豚|狐|熊",
