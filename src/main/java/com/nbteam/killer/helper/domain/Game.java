@@ -50,6 +50,7 @@ public class Game extends GameBook {
 
     }
 
+    @Override
     public List<Player> getPlayers() {
         if (CollUtil.isEmpty(players)) {
             return players;
