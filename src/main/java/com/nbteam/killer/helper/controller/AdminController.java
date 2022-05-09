@@ -33,7 +33,7 @@ public class AdminController {
     @GetMapping("/version")
     @ApiOperation("获取版本号")
     public Result<?> version() {
-        return Result.ok(version);
+        return Result.ok(buildTime);
     }
 
     @PostMapping("/create/{total}")
