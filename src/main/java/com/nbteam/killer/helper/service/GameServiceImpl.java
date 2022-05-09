@@ -10,6 +10,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.stereotype.Service;
 
+import java.util.concurrent.TimeUnit;
+
 @Service
 public class GameServiceImpl implements GameService {
 
@@ -29,13 +31,18 @@ public class GameServiceImpl implements GameService {
      */
     String player_key = "player:%s:%s";
 
+    /**
+     * 过期时间
+     */
+    Long timeout = 24L;
+
     @Override
     public Game create(Integer playerTotal) throws Exception {
 
         Game game = BeanUtil.copyProperties(gameBookRepository.getRandom(playerTotal), Game.class);
         String code = game.getCode();
         game.randomNumber();
-        redisTemplate.opsForValue().set(String.format(game_key, code), JSONUtil.toJsonStr(game));
+        redisTemplate.opsForValue().set(String.format(game_key, code), JSONUtil.toJsonStr(game), timeout, TimeUnit.HOURS);
         return game;
 
     }
@@ -45,7 +52,7 @@ public class GameServiceImpl implements GameService {
         Game game = BeanUtil.copyProperties(gameBookRepository.getById(id), Game.class);
         String code = game.getCode();
         game.randomNumber();
-        redisTemplate.opsForValue().set(String.format(game_key, code), JSONUtil.toJsonStr(game));
+        redisTemplate.opsForValue().set(String.format(game_key, code), JSONUtil.toJsonStr(game), timeout, TimeUnit.HOURS);
         return game;
     }
 
@@ -73,8 +80,8 @@ public class GameServiceImpl implements GameService {
             throw new Exception("错误：当前编号玩家已入场");
         }
 
-        Player player = game.getPlayers().stream().filter(p -> p.getNumber() == number).findAny().orElseThrow(() -> new Exception("错误：当前房间无此编号玩家"));
-        redisTemplate.opsForValue().set(String.format(player_key, code, number), JSONUtil.toJsonStr(player));
+        Player player = game.getPlayers().stream().filter(p -> p.getNumber().equals(number)).findAny().orElseThrow(() -> new Exception("错误：当前房间无此编号玩家"));
+        redisTemplate.opsForValue().set(String.format(player_key, code, number), JSONUtil.toJsonStr(player), timeout, TimeUnit.HOURS);
 
         return game;
     }
