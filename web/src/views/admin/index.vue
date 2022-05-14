@@ -1,12 +1,12 @@
 <template>
   <div class="admin">
     <CellGroup>
-      <Field v-model="code" label="房间" placeholder="请输入">
+      <Field v-model="code" label="房间" placeholder="请输入" type="digit">
         <template #button>
           <van-button size="small" type="primary" @click="handleBack">重回房间</van-button>
         </template>
       </Field>
-      <Field v-model="number" label="人数" placeholder="请输入">
+      <Field v-model="number" label="人数" placeholder="请输入" type="digit">
         <template #button>
           <van-button size="small" type="primary" @click="handleCreate">创建房间</van-button>
         </template>
@@ -19,6 +19,7 @@
         label="板子"
         placeholder="点击选择"
         @click="showPicker = true"
+        v-if="!number"
       >
       </Field>
       <Popup v-model:show="showPicker" position="bottom">
@@ -52,7 +53,7 @@ function handleCreate(gameBookId: string) {
 }
 
 function onConfirm(value: any) {
-  console.log('value', value)
+  number.value = ''
   handleCreate(value.id)
 }
 async function getGameBook() {
