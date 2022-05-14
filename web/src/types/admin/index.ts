@@ -4,6 +4,8 @@ export interface Game {
   players: Players[];
   title: string;
   total: number | string;
+  team?: Players[];
+  showTeam?: string;
 }
 
 export interface Players {
