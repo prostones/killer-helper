@@ -2,8 +2,8 @@
   <div class="player">
     <Form @submit="onSubmit">
       <CellGroup>
-        <Field v-model="code" label="房间" placeholder="请输入" />
-        <Field v-model="number" label="座位号" placeholder="请输入" />
+        <Field v-model="code" label="房间" placeholder="请输入" type="digit"/>
+        <Field v-model="number" label="座位号" placeholder="请输入" type="digit"/>
       </CellGroup>
       <div style="margin: 16px;">
         <van-button round block type="primary" native-type="submit">
