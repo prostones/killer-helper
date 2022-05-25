@@ -41,8 +41,11 @@ public enum RoleEnum {
     BAI_MAO("白猫", "", true, ""),
     HE_TUN("河豚", "", true, ""),
     ZI_HU("子狐", "", true, ""),
-    XIONG("熊", "", true, "");
+    XIONG("熊", "", true, ""),
 
+    LANG_LANG("狼狼","",true,""),
+    HOU_LANG("厚狼","",true,"")
+    ;
 
     /**
      * 名称
