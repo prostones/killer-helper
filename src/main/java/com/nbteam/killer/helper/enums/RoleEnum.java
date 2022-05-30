@@ -30,10 +30,15 @@ public enum RoleEnum {
     MENG_YAN("梦魇", "", false, ""),
     BAI_LANG_WANG("白狼王", "属于狼人阵营，白狼王可以在白天自爆的时候，选择带走一名玩家，非自爆出局不得发动技能。", false, ""),
     MO_SHU_SHI("魔术师", "在夜间先手行动，每晚都可以交换2个没换过的人的号码牌，仅当晚有效。在当晚这两位玩家的技能结算结果将会被交换。", true, ""),
-    CHUN_BAI_ZHI_NV("纯白之女","每晚可以查验场上一名玩家的具体身份，并且从第二夜起，纯白之女查验到狼人，则狼人死亡。",true,""),
+    CHUN_BAI_ZHI_NV("纯白之女", "每晚可以查验场上一名玩家的具体身份，并且从第二夜起，纯白之女查验到狼人，则狼人死亡。", true, ""),
     LANG_WU("狼巫", "每晚可以查验场上除狼人阵营外的一名玩家的具体身份，且从第二夜起，狼巫验到纯白之女，则纯白之女死亡。", true, ""),
-    QIAN_XING_ZHE("潜行者","",true,""),
-    JIN_YAN_ZHANG_LAO("禁言长老","",true,""),
+    QIAN_XING_ZHE("潜行者", "", true, ""),
+    JIN_YAN_ZHANG_LAO("禁言长老", "", true, ""),
+    AN_LIAN_ZHE("暗恋者", "", false, ""),
+    E_MENG_ZHI_YING("噩梦之影", "", false, ""),
+    ZHU_SHI_LANG_FEI("蚀时狼妃", "", false, ""),
+    SHE_MENG_REN("摄梦人", "", false, ""),
+    WU_YA("乌鸦", "", false, ""),
 
     LANG("狼", "", true, ""),
     MEI("美", "", true, ""),
@@ -43,9 +48,8 @@ public enum RoleEnum {
     ZI_HU("子狐", "", true, ""),
     XIONG("熊", "", true, ""),
 
-    LANG_LANG("狼狼","",true,""),
-    HOU_LANG("厚狼","",true,"")
-    ;
+    LANG_LANG("狼狼", "", true, ""),
+    HOU_LANG("厚狼", "", true, "");
 
     /**
      * 名称
