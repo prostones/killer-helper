@@ -6,7 +6,6 @@ import com.nbteam.killer.helper.domain.GameBook;
 import com.nbteam.killer.helper.enums.RoleEnum;
 import org.springframework.stereotype.Repository;
 
-import javax.management.relation.Role;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -149,14 +148,11 @@ public class GameBookRepositoryImpl implements GameBookRepository {
                 RoleEnum.YU_YAN_JIA, RoleEnum.NV_WU,
                 RoleEnum.LIE_REN, RoleEnum.LIE_REN, RoleEnum.LIE_REN));
 
-        //
+        // 12人
         gameBooks.add(new GameBook("女|预|猎|白|摄|乌|丘|暗|噩|蚀时狼妃|狼巫|狼王",
-                RoleEnum.NV_WU,RoleEnum.YU_YAN_JIA,RoleEnum.LIE_REN,RoleEnum.BAI_CHI,
-                RoleEnum.SHE_MENG_REN,RoleEnum.WU_YA,RoleEnum.QIU_BI_TE
-
-                RoleEnum.AN_LIAN_ZHE,RoleEnum.E_MENG_ZHI_YING,RoleEnum.ZHU_SHI_LANG_FEI,RoleEnum.LANG_WU,RoleEnum.LANG
-
-
+                RoleEnum.NV_WU, RoleEnum.YU_YAN_JIA, RoleEnum.LIE_REN, RoleEnum.BAI_CHI,
+                RoleEnum.SHE_MENG_REN, RoleEnum.WU_YA, RoleEnum.QIU_BI_TE,
+                RoleEnum.AN_LIAN_ZHE, RoleEnum.E_MENG_ZHI_YING, RoleEnum.ZHU_SHI_LANG_FEI, RoleEnum.LANG_WU, RoleEnum.BAI_LANG_WANG
         ));
     }
 
