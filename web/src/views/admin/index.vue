@@ -6,9 +6,15 @@
           <van-button size="small" type="primary" @click="handleBack">重回房间</van-button>
         </template>
       </Field>
-      <Field v-model="number" label="人数" placeholder="请输入" type="digit">
+      <!-- 暂时不需要人数 -->
+      <!-- <Field v-model="number" label="人数" placeholder="请输入" type="digit">
         <template #button>
           <van-button size="small" type="primary" @click="handleCreate">创建房间</van-button>
+        </template>
+      </Field> -->
+      <Field name="switch" label="黑死病">
+        <template #input>
+          <Switch v-model="check" size="20" />
         </template>
       </Field>
       <Field
@@ -34,13 +40,14 @@
 </template>
 
 <script setup lang="ts">
-import { Field, CellGroup, Popup, Picker } from 'vant'
+import { Field, CellGroup, Popup, Picker, Switch } from 'vant'
 import { useRouter } from 'vue-router'
 import {ref} from 'vue'
 import { queryGameBook } from '@/api/api'
-const code = ref('')
-const number = ref('')
-const gameBookId = ref('')
+const code = ref<string>('')
+const number = ref<string>('')
+const check = ref<boolean>(false)
+const gameBookId = ref<string>('')
 const columns = ref([])
 const showPicker = ref(false)
 const router = useRouter()
@@ -49,7 +56,8 @@ function handleBack() {
   router.push({ path: '/adminGame', query: { code: code.value }})
 }
 function handleCreate(gameBookId: string) {
-  router.push({ path: '/adminGame', query: { number: number.value, gameBookId }})
+  const isBdModel: string = check.value ? '1' : '0'
+  router.push({ path: '/adminGame', query: { number: number.value, gameBookId, isBdModel }})
 }
 
 function onConfirm(value: any) {
