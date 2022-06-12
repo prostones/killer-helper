@@ -48,8 +48,9 @@ public class AdminController {
 
     @PostMapping("/create/by/{gameBookId}")
     @ApiOperation("创建房间,使用板子id")
-    public Result<?> create(@PathVariable("gameBookId") String gameBookId) throws Exception {
-        Game game = gameService.create(gameBookId);
+    public Result<?> create(@PathVariable("gameBookId") String gameBookId,
+                            @RequestParam(value = "isBdModal", required = false, defaultValue = "false") Boolean isBdModal) throws Exception {
+        Game game = gameService.create(gameBookId, isBdModal);
         return Result.ok(game);
     }
 

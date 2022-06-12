@@ -22,6 +22,15 @@ public interface GameService {
     Game create(String id) throws Exception;
 
     /**
+     * 通过板子id创建房间
+     *
+     * @param id
+     * @param isBdModal
+     * @return
+     */
+    Game create(String id, Boolean isBdModal) throws Exception;
+
+    /**
      * 上帝模式加入
      *
      * @param code

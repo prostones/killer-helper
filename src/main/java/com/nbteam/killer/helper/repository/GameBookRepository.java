@@ -24,6 +24,15 @@ public interface GameBookRepository {
     GameBook getById(String id) throws Exception;
 
     /**
+     * 通过板子id创建板子
+     *
+     * @param id
+     * @param isBdModal
+     * @return
+     */
+    GameBook getById(String id, Boolean isBdModal) throws Exception;
+
+    /**
      * 获取板子集合
      *
      * @return

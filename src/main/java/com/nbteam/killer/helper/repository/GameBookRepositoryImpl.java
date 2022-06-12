@@ -1,6 +1,7 @@
 package com.nbteam.killer.helper.repository;
 
 import cn.hutool.core.collection.CollUtil;
+import cn.hutool.core.util.BooleanUtil;
 import cn.hutool.core.util.RandomUtil;
 import com.nbteam.killer.helper.domain.GameBook;
 import com.nbteam.killer.helper.enums.RoleEnum;
@@ -154,7 +155,18 @@ public class GameBookRepositoryImpl implements GameBookRepository {
                 RoleEnum.SHE_MENG_REN, RoleEnum.WU_YA, RoleEnum.QIU_BI_TE,
                 RoleEnum.AN_LIAN_ZHE, RoleEnum.E_MENG_ZHI_YING, RoleEnum.ZHU_SHI_LANG_FEI, RoleEnum.LANG_WU, RoleEnum.BAI_LANG_WANG
         ));
+
     }
+
+    /**
+     * 黑死病模式
+     */
+    GameBook BD_BOOK = new GameBook("黑死病模式",
+            RoleEnum.YU_YAN_JIA,
+            RoleEnum.PING_MING, RoleEnum.PING_MING, RoleEnum.PING_MING,
+            RoleEnum.PING_MING, RoleEnum.PING_MING, RoleEnum.PING_MING,
+            RoleEnum.PING_MING, RoleEnum.PING_MING, RoleEnum.PING_MING,
+            RoleEnum.PING_MING, RoleEnum.PING_MING);
 
     @Override
     public GameBook getRandom(Integer playerTotal) throws Exception {
@@ -169,7 +181,21 @@ public class GameBookRepositoryImpl implements GameBookRepository {
 
     @Override
     public GameBook getById(String id) throws Exception {
-        return gameBooks.stream().filter(book -> book.getId().equals(id)).findAny().orElseThrow(() -> new Exception(String.format("错误：无法通过id[%s]找到板子", id)));
+        return this.getById(id, null);
+    }
+
+    @Override
+    public GameBook getById(String id, Boolean isBdModal) throws Exception {
+
+        GameBook realBook = gameBooks.stream().filter(book -> book.getId().equals(id)).findAny().orElseThrow(() -> new Exception(String.format("错误：无法通过id[%s]找到板子", id)));
+
+        if (BooleanUtil.isTrue(isBdModal) && realBook.getPlayers().size() == 12) {
+            // 偷换玩家，如果模式多，可以再代理中实现
+            GameBook bdBook = this.BD_BOOK;
+            realBook.setPlayers(bdBook.getPlayers());
+        }
+
+        return realBook;
     }
 
     @Override
