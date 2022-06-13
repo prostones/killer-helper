@@ -56,8 +56,8 @@ function handleBack() {
   router.push({ path: '/adminGame', query: { code: code.value }})
 }
 function handleCreate(gameBookId: string) {
-  const isBdModel: string = check.value ? '1' : '0'
-  router.push({ path: '/adminGame', query: { number: number.value, gameBookId, isBdModel }})
+  const isBdModal: string = check.value ? '1' : '0'
+  router.push({ path: '/adminGame', query: { number: number.value, gameBookId, isBdModal }})
 }
 
 function onConfirm(value: any) {

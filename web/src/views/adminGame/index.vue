@@ -28,7 +28,7 @@ const detail = ref<Game>({
 });
 
 const router = useRouter()
-const { code, number, gameBookId, isBdModel } = router.currentRoute.value.query
+const { code, number, gameBookId, isBdModal } = router.currentRoute.value.query
 
 if (number) {
   create(number.toString())
@@ -47,7 +47,7 @@ async function create(total: string) {
   }
 }
 async function create2(id: string) {
-  const res = await createByGameBookId(id, isBdModel === '1')
+  const res = await createByGameBookId(id, isBdModal === '1')
   if (res.status === 500) {
 
   } else {
