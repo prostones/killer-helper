@@ -192,7 +192,8 @@ public class GameBookRepositoryImpl implements GameBookRepository {
         if (BooleanUtil.isTrue(isBdModal) && realBook.getPlayers().size() == 12) {
             // 偷换玩家，如果模式多，可以再代理中实现
             GameBook bdBook = this.BD_BOOK;
-            realBook.setPlayers(bdBook.getPlayers());
+            bdBook.setTitle(realBook.getTitle());
+            return bdBook;
         }
 
         return realBook;
