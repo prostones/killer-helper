@@ -11,8 +11,8 @@ enum Api {
 export const createRoom = (total: string) => {
   return request.post<any>(Api.CreateRoom + total);
 };
-export const createByGameBookId = (gameBookId: string, isBdModel: boolean) => {
-  return request.post<any>(`${Api.CreateByGameBookId}${gameBookId}?isBdModel=${isBdModel}`);
+export const createByGameBookId = (gameBookId: string, isBdModal: boolean) => {
+  return request.post<any>(`${Api.CreateByGameBookId}${gameBookId}?isBdModal=${isBdModal}`);
 };
 export const backRoom = (code: string) => {
   return request.post<any>(Api.BackRoom + code);
