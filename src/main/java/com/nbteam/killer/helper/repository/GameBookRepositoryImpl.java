@@ -84,6 +84,11 @@ public class GameBookRepositoryImpl implements GameBookRepository {
                 RoleEnum.LANG_REN, RoleEnum.LANG_REN, RoleEnum.LANG_REN, RoleEnum.LANG_REN,
                 RoleEnum.YU_YAN_JIA, RoleEnum.NV_WU, RoleEnum.QIAN_XING_ZHE, RoleEnum.JIN_YAN_ZHANG_LAO));
 
+        gameBooks.add(new GameBook("预|女|侍女|伯爵|摄|3狼|4民",
+                RoleEnum.PING_MING, RoleEnum.PING_MING, RoleEnum.PING_MING, RoleEnum.PING_MING,
+                RoleEnum.LANG_REN, RoleEnum.LANG_REN, RoleEnum.LANG_REN,RoleEnum.SHE_MENG_REN,
+                RoleEnum.YU_YAN_JIA, RoleEnum.NV_WU, RoleEnum.SHI_NV, RoleEnum.BO_JUE));
+
         // 13人
         gameBooks.add(new GameBook("预|女|猎|守|4民|4狼|咒狐",
                 RoleEnum.PING_MING, RoleEnum.PING_MING, RoleEnum.PING_MING, RoleEnum.PING_MING,
@@ -127,6 +132,13 @@ public class GameBookRepositoryImpl implements GameBookRepository {
                 RoleEnum.YU_YAN_JIA, RoleEnum.NV_WU, RoleEnum.LIE_REN, RoleEnum.BAI_CHI, RoleEnum.QI_SHI
         ));
 
+        gameBooks.add(new GameBook("预|女|猎|白|摄梦人|4狼|恶灵骑士|5民",
+                RoleEnum.PING_MING, RoleEnum.PING_MING, RoleEnum.PING_MING, RoleEnum.PING_MING, RoleEnum.PING_MING,
+                RoleEnum.LANG_REN, RoleEnum.LANG_REN, RoleEnum.LANG_REN, RoleEnum.LANG_REN,
+                RoleEnum.E_LING_QI_SHI,
+                RoleEnum.YU_YAN_JIA, RoleEnum.NV_WU, RoleEnum.LIE_REN, RoleEnum.BAI_CHI, RoleEnum.SHE_MENG_REN
+        ));
+
         // 动物梦境
         // 10人
         gameBooks.add(new GameBook("2狼|美|4羊|豚|狐|熊",
@@ -163,7 +175,7 @@ public class GameBookRepositoryImpl implements GameBookRepository {
      */
     GameBook BD_BOOK = new GameBook("黑死病模式",
             RoleEnum.YU_YAN_JIA,
-            RoleEnum.PING_MING, RoleEnum.PING_MING, RoleEnum.PING_MING,
+            RoleEnum.NV_WU, RoleEnum.PING_MING, RoleEnum.PING_MING,
             RoleEnum.PING_MING, RoleEnum.PING_MING, RoleEnum.PING_MING,
             RoleEnum.PING_MING, RoleEnum.PING_MING, RoleEnum.PING_MING,
             RoleEnum.PING_MING, RoleEnum.PING_MING);

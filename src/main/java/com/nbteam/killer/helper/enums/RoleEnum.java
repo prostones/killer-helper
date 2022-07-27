@@ -39,6 +39,9 @@ public enum RoleEnum {
     ZHU_SHI_LANG_FEI("蚀时狼妃", "", false, ""),
     SHE_MENG_REN("摄梦人", "", false, ""),
     WU_YA("乌鸦", "", false, ""),
+    SHI_NV("侍女","",true,""),
+    BO_JUE("伯爵","",true,""),
+    E_LING_QI_SHI("恶灵骑士","",false,""),
 
     LANG("狼", "", true, ""),
     MEI("美", "", true, ""),

@@ -9,3 +9,7 @@ spring:
     port: 6379
   thymeleaf:
     cache: false
+
+logging:
+  file:
+    name: /logs/k.log
