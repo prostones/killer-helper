@@ -86,7 +86,7 @@ public class GameBookRepositoryImpl implements GameBookRepository {
 
         gameBooks.add(new GameBook("预|女|侍女|伯爵|摄|3狼|4民",
                 RoleEnum.PING_MING, RoleEnum.PING_MING, RoleEnum.PING_MING, RoleEnum.PING_MING,
-                RoleEnum.LANG_REN, RoleEnum.LANG_REN, RoleEnum.LANG_REN,RoleEnum.SHE_MENG_REN,
+                RoleEnum.LANG_REN, RoleEnum.LANG_REN, RoleEnum.LANG_REN, RoleEnum.SHE_MENG_REN,
                 RoleEnum.YU_YAN_JIA, RoleEnum.NV_WU, RoleEnum.SHI_NV, RoleEnum.BO_JUE));
 
         // 13人
@@ -180,6 +180,12 @@ public class GameBookRepositoryImpl implements GameBookRepository {
             RoleEnum.PING_MING, RoleEnum.PING_MING, RoleEnum.PING_MING,
             RoleEnum.PING_MING, RoleEnum.PING_MING);
 
+    GameBook BD_BOOK9 = new GameBook("黑死病9模式",
+            RoleEnum.YU_YAN_JIA,
+            RoleEnum.NV_WU, RoleEnum.PING_MING, RoleEnum.PING_MING,
+            RoleEnum.PING_MING, RoleEnum.PING_MING, RoleEnum.PING_MING,
+            RoleEnum.PING_MING, RoleEnum.PING_MING);
+
     @Override
     public GameBook getRandom(Integer playerTotal) throws Exception {
 
@@ -200,6 +206,13 @@ public class GameBookRepositoryImpl implements GameBookRepository {
     public GameBook getById(String id, Boolean isBdModal) throws Exception {
 
         GameBook realBook = gameBooks.stream().filter(book -> book.getId().equals(id)).findAny().orElseThrow(() -> new Exception(String.format("错误：无法通过id[%s]找到板子", id)));
+
+        if (BooleanUtil.isTrue(isBdModal) && realBook.getPlayers().size() == 9) {
+            // 偷换玩家，如果模式多，可以再代理中实现
+            GameBook bdBook = this.BD_BOOK9;
+            bdBook.setTitle(realBook.getTitle());
+            return bdBook;
+        }
 
         if (BooleanUtil.isTrue(isBdModal) && realBook.getPlayers().size() == 12) {
             // 偷换玩家，如果模式多，可以再代理中实现
