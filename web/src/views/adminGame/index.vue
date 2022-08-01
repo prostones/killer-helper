@@ -27,7 +27,7 @@ const detail = ref<Game>({
   title: '',
   total: ''
 });
-const sayer = ref<Number>(1)
+const sayer = ref<number>(1)
 const router = useRouter()
 const { code, number, gameBookId, isBdModal } = router.currentRoute.value.query
 
