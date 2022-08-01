@@ -4,6 +4,7 @@
         <Field label="标题" v-model="detail.title" readonly></Field>
         <Field label="房间号" v-model="detail.code" readonly></Field>
         <Field label="总人数" v-model="detail.total" readonly></Field>
+        <Field label="发言人" v-model="sayer" readonly></Field>
       </CellGroup>
       <CellGroup inset v-for="player in detail.players">
         <Field :label="'座位号'+player.number" :error="player.role.goodMan == false" :label-class="player.role.goodMan == false? 'error-font':''"
@@ -26,7 +27,7 @@ const detail = ref<Game>({
   title: '',
   total: ''
 });
-
+const sayer = ref<Number>(1)
 const router = useRouter()
 const { code, number, gameBookId, isBdModal } = router.currentRoute.value.query
 
@@ -44,6 +45,8 @@ async function create(total: string) {
 
   } else {
     detail.value = res.data
+    const len = detail.value.players.length
+    sayer.value = Math.ceil(Math.random() * 100 % len)
   }
 }
 async function create2(id: string) {
@@ -52,6 +55,8 @@ async function create2(id: string) {
 
   } else {
     detail.value = res.data
+    const len = detail.value.players.length
+    sayer.value = Math.ceil(Math.random() * 100 % len)
   }
 }
 async function back(code: string) {
