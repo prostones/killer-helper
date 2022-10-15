@@ -11,16 +11,15 @@
     </parent>
 
     <groupId>com.nbteam.killer.helper</groupId>
-    <artifactId>killer-helper-base</artifactId>
+    <artifactId>killer-helper-kt-api</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>killer-helper-base</name>
+    <name>killer-helper-kt-api</name>
     <description>Demo project for Spring Boot</description>
     <properties>
         <java.version>11</java.version>
         <repackage.classifier/>
         <kotlin.version>1.6.21</kotlin.version>
         <spring-native.version>0.12.1</spring-native.version>
-        <skipTests>true</skipTests>
     </properties>
     <dependencies>
         <dependency>
@@ -72,42 +71,35 @@
         <sourceDirectory>${project.basedir}/src/main/kotlin</sourceDirectory>
         <testSourceDirectory>${project.basedir}/src/test/kotlin</testSourceDirectory>
         <plugins>
-<!--            <plugin>-->
-<!--                <groupId>org.springframework.boot</groupId>-->
-<!--                <artifactId>spring-boot-maven-plugin</artifactId>-->
-<!--                <configuration>-->
-<!--                    <excludes>-->
-<!--                        <exclude>-->
-<!--                            <groupId>org.projectlombok</groupId>-->
-<!--                            <artifactId>lombok</artifactId>-->
-<!--                        </exclude>-->
-<!--                    </excludes>-->
-<!--                    <classifier>${repackage.classifier}</classifier>-->
-<!--                    <image>-->
-<!--                        <builder>paketobuildpacks/builder:tiny</builder>-->
-<!--                        <env>-->
-<!--                            <BP_NATIVE_IMAGE>true</BP_NATIVE_IMAGE>-->
-<!--                        </env>-->
-<!--                    </image>-->
-<!--                </configuration>-->
-<!--            </plugin>-->
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <excludes>
+                        <exclude>
+                            <groupId>org.projectlombok</groupId>
+                            <artifactId>lombok</artifactId>
+                        </exclude>
+                    </excludes>
+                    <classifier>${repackage.classifier}</classifier>
+                    <image>
+                        <builder>paketobuildpacks/builder:tiny</builder>
+                        <env>
+                            <BP_NATIVE_IMAGE>true</BP_NATIVE_IMAGE>
+                        </env>
+                    </image>
+                </configuration>
+            </plugin>
             <plugin>
                 <groupId>org.jetbrains.kotlin</groupId>
                 <artifactId>kotlin-maven-plugin</artifactId>
                 <configuration>
-                    <!-- java 模块依赖时 必须包含源码，用于二次编译 -->
-                    <sourceDirs>
-                        <sourceDir>${project.basedir}/src/main/kotlin</sourceDir>
-                        <sourceDir>${project.basedir}/src/main/java</sourceDir>
-                    </sourceDirs>
-
                     <args>
                         <arg>-Xjsr305=strict</arg>
                     </args>
                     <compilerPlugins>
                         <plugin>spring</plugin>
                     </compilerPlugins>
-
                 </configuration>
                 <dependencies>
                     <dependency>

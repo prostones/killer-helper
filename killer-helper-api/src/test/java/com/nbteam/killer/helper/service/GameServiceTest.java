@@ -2,15 +2,17 @@ package com.nbteam.killer.helper.service;
 
 import cn.hutool.core.util.NumberUtil;
 import com.nbteam.killer.helper.KillerHelperApplication;
-import com.nbteam.killer.helper.enums.RoleEnum;
+import com.nbteam.killer.helper.base.enums.RoleEnum;
+import com.nbteam.killer.helper.domain.GameBook;
 import com.nbteam.killer.helper.repository.GameBookRepository;
 import lombok.extern.slf4j.Slf4j;
-import lombok.var;
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
+
+import java.util.List;
 
 @SpringBootTest(classes = KillerHelperApplication.class)
 @RunWith(SpringRunner.class)
@@ -25,8 +27,8 @@ class GameServiceTest {
 
     @Test
     void create() throws Exception {
-        var list = gameBookRepository.list();
-        var book = list.get(0);
+        List<GameBook> list = gameBookRepository.list();
+        GameBook book = list.get(0);
 
         log.info("注意：使用板子" + book.getTitle() + "进行测试");
 

@@ -3,8 +3,8 @@ package com.nbteam.killer.helper.repository;
 import cn.hutool.core.collection.CollUtil;
 import cn.hutool.core.util.BooleanUtil;
 import cn.hutool.core.util.RandomUtil;
+import com.nbteam.killer.helper.base.enums.RoleEnum;
 import com.nbteam.killer.helper.domain.GameBook;
-import com.nbteam.killer.helper.enums.RoleEnum;
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;

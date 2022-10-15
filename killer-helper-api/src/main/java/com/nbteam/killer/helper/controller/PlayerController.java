@@ -2,8 +2,8 @@ package com.nbteam.killer.helper.controller;
 
 import cn.hutool.core.bean.BeanUtil;
 import cn.hutool.core.collection.CollUtil;
+import com.nbteam.killer.helper.base.enums.RoleEnum;
 import com.nbteam.killer.helper.domain.Game;
-import com.nbteam.killer.helper.enums.RoleEnum;
 import com.nbteam.killer.helper.service.GameService;
 import com.nbteam.killer.helper.vo.GameVO;
 import com.nbteam.killer.helper.vo.Result;

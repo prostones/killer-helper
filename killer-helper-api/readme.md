@@ -38,7 +38,7 @@
 ### 录本的朋友请前往
 
 ```
-=> com.nbteam.killer.helper.enums.RoleEnum // 增加角色
+=> com.nbteam.killer.helper.base.enums.RoleEnum // 增加角色
 => com.nbteam.killer.helper.repository.GameBookRepositoryImpl // 增加板子
 ```
 

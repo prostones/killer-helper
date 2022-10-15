@@ -16,9 +16,19 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
+    <properties>
+        <java.version>11</java.version>
+        <repackage.classifier/>
+        <kotlin.version>1.6.21</kotlin.version>
+        <kotlin.compiler.incremental>true</kotlin.compiler.incremental>
+        <spring-native.version>0.12.1</spring-native.version>
+        <skipTests>true</skipTests>
+    </properties>
+
     <modules>
         <module>killer-helper-api</module>
         <module>killer-helper-base</module>
+        <module>killer-helper-kt-api</module>
     </modules>
 
 </project>

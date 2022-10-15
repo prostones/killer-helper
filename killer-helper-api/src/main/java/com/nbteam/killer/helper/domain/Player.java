@@ -1,6 +1,6 @@
 package com.nbteam.killer.helper.domain;
 
-import com.nbteam.killer.helper.enums.RoleEnum;
+import com.nbteam.killer.helper.base.enums.RoleEnum;
 import lombok.Data;
 
 @Data

@@ -1,7 +1,7 @@
 package com.nbteam.killer.helper.domain;
 
 import cn.hutool.core.util.StrUtil;
-import com.nbteam.killer.helper.enums.RoleEnum;
+import com.nbteam.killer.helper.base.enums.RoleEnum;
 import lombok.Data;
 
 import java.io.Serializable;
