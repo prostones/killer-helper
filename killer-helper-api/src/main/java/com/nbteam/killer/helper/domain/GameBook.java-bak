@@ -13,9 +13,9 @@ import java.util.UUID;
 @Data
 public class GameBook implements Serializable {
 
-    String id;
+   protected String id;
 
-    String title;
+   protected String title;
 
     public GameBook(RoleEnum... rs) {
         Arrays.stream(rs).forEach(r -> players.add(new Player(r)));
@@ -35,7 +35,7 @@ public class GameBook implements Serializable {
         return id;
     }
 
-    List<Player> players = new ArrayList<>();
+   protected List<Player> players = new ArrayList<>();
 
     public Integer getTotal() {
         return players.size();

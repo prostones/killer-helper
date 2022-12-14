@@ -3,8 +3,8 @@ package com.nbteam.killer.helper.service;
 import cn.hutool.core.bean.BeanUtil;
 import cn.hutool.core.util.StrUtil;
 import cn.hutool.json.JSONUtil;
-import com.nbteam.killer.helper.domain.Game;
-import com.nbteam.killer.helper.domain.Player;
+import com.nbteam.killer.helper.base.domain.Game;
+import com.nbteam.killer.helper.base.domain.Player;
 import com.nbteam.killer.helper.repository.GameBookRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.StringRedisTemplate;
@@ -89,7 +89,7 @@ public class GameServiceImpl implements GameService {
             throw new Exception("错误：当前编号玩家已入场");
         }
 
-        Player player = game.getPlayers().stream().filter(p -> p.getNumber().equals(number)).findAny().orElseThrow(() -> new Exception("错误：当前房间无此编号玩家"));
+        Player player = game.getPlayers().stream().filter(p -> p.getNumber() == number).findAny().orElseThrow(() -> new Exception("错误：当前房间无此编号玩家"));
         redisTemplate.opsForValue().set(String.format(player_key, code, number), JSONUtil.toJsonStr(player), timeout, TimeUnit.HOURS);
 
         return game;

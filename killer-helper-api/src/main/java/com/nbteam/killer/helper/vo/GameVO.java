@@ -1,7 +1,7 @@
 package com.nbteam.killer.helper.vo;
 
-import com.nbteam.killer.helper.domain.Game;
-import com.nbteam.killer.helper.domain.Player;
+import com.nbteam.killer.helper.base.domain.Game;
+import com.nbteam.killer.helper.base.domain.Player;
 import lombok.Data;
 
 import java.util.List;

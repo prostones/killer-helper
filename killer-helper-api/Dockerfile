@@ -1,5 +1,5 @@
 # 基础镜像
-FROM azul/zulu-openjdk:8
+FROM azul/zulu-openjdk:11
 # 作者
 MAINTAINER nbteam
 # 把可执行jar包复制到基础镜像的根目录下

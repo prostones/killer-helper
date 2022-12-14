@@ -1,6 +1,6 @@
 package com.nbteam.killer.helper.service;
 
-import com.nbteam.killer.helper.domain.Game;
+import com.nbteam.killer.helper.base.domain.Game;
 
 public interface GameService {
 

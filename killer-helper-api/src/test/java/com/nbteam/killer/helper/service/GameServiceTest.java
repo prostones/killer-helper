@@ -2,8 +2,8 @@ package com.nbteam.killer.helper.service;
 
 import cn.hutool.core.util.NumberUtil;
 import com.nbteam.killer.helper.KillerHelperApplication;
+import com.nbteam.killer.helper.base.domain.GameBook;
 import com.nbteam.killer.helper.base.enums.RoleEnum;
-import com.nbteam.killer.helper.domain.GameBook;
 import com.nbteam.killer.helper.repository.GameBookRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
@@ -37,11 +37,11 @@ class GameServiceTest {
         int total = 1000;
 
         for (int i = 0; i < 1000; i++) {
-            if (gameService.create(book.getId()).getPlayers().stream().anyMatch(p -> p.getNumber().equals(1) && p.getRole().equals(RoleEnum.YU_YAN_JIA))) {
+            if (gameService.create(book.getId()).getPlayers().stream().anyMatch(p -> p.getNumber() == 1 && p.getRole().equals(RoleEnum.YU_YAN_JIA))) {
                 count++;
             }
 
-            if (gameService.create(book.getId()).getPlayers().stream().anyMatch(p -> p.getNumber().equals(1) && p.getRole().equals(RoleEnum.LANG_REN))) {
+            if (gameService.create(book.getId()).getPlayers().stream().anyMatch(p -> p.getNumber() == 1 && p.getRole().equals(RoleEnum.LANG_REN))) {
                 langRenCount++;
             }
         }

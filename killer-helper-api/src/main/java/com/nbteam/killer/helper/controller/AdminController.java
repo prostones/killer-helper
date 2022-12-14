@@ -1,6 +1,6 @@
 package com.nbteam.killer.helper.controller;
 
-import com.nbteam.killer.helper.domain.Game;
+import com.nbteam.killer.helper.base.domain.Game;
 import com.nbteam.killer.helper.service.GameService;
 import com.nbteam.killer.helper.vo.Result;
 import io.swagger.annotations.Api;
