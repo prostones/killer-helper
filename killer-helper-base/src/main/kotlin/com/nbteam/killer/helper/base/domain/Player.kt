@@ -8,7 +8,7 @@ open class Player(
     /**
      * 角色
      */
-    var role: RoleEnum
+    var role: RoleEnum?
 ) {
     /**
      * 座位号

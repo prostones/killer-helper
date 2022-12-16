@@ -1,18 +1,23 @@
 package com.nbteam.killer.helper.service;
 
 import cn.hutool.core.bean.BeanUtil;
+import cn.hutool.core.map.MapUtil;
 import cn.hutool.core.util.StrUtil;
+import cn.hutool.json.JSONObject;
 import cn.hutool.json.JSONUtil;
 import com.nbteam.killer.helper.base.domain.Game;
 import com.nbteam.killer.helper.base.domain.Player;
 import com.nbteam.killer.helper.repository.GameBookRepository;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 @Service
+@Slf4j
 public class GameServiceImpl implements GameService {
 
     @Autowired
@@ -82,6 +87,8 @@ public class GameServiceImpl implements GameService {
         if (StrUtil.isBlankOrUndefined(json)) {
             throw new Exception("错误：无法找到房间");
         }
+
+        log.info("载入游戏" + json);
         Game game = JSONUtil.toBean(json, Game.class);
 
         String playerJson = redisTemplate.opsForValue().get(String.format(player_key, code, number));
