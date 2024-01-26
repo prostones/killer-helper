@@ -12,7 +12,7 @@ services:
 #      - "6379:6379"
 
   killer-helper:
-    image: pro4stones/killer-helper
+    image: pro4stones/killer-helper:latest
     container_name: killer-helper
     restart: always
     environment:
