@@ -18,23 +18,23 @@ public class GameBookRepositoryImpl implements GameBookRepository {
 
     static {
 
-        // 9人
-        gameBooks.add(new GameBook("预|女|猎|3民|3狼",
-                RoleEnum.PING_MING, RoleEnum.PING_MING, RoleEnum.PING_MING,
-                RoleEnum.LANG_REN, RoleEnum.LANG_REN, RoleEnum.LANG_REN,
-                RoleEnum.YU_YAN_JIA, RoleEnum.NV_WU, RoleEnum.LIE_REN));
-
-        // 10人
-        gameBooks.add(new GameBook("预|女|猎|白|3民|3狼",
-                RoleEnum.PING_MING, RoleEnum.PING_MING, RoleEnum.PING_MING,
-                RoleEnum.LANG_REN, RoleEnum.LANG_REN, RoleEnum.LANG_REN,
-                RoleEnum.YU_YAN_JIA, RoleEnum.NV_WU, RoleEnum.LIE_REN, RoleEnum.BAI_CHI));
-
-        // 11人
-        gameBooks.add(new GameBook("预|女|猎|4民|4狼",
-                RoleEnum.PING_MING, RoleEnum.PING_MING, RoleEnum.PING_MING, RoleEnum.PING_MING,
-                RoleEnum.LANG_REN, RoleEnum.LANG_REN, RoleEnum.LANG_REN, RoleEnum.LANG_REN,
-                RoleEnum.YU_YAN_JIA, RoleEnum.NV_WU, RoleEnum.LIE_REN));
+//        // 9人
+//        gameBooks.add(new GameBook("预|女|猎|3民|3狼",
+//                RoleEnum.PING_MING, RoleEnum.PING_MING, RoleEnum.PING_MING,
+//                RoleEnum.LANG_REN, RoleEnum.LANG_REN, RoleEnum.LANG_REN,
+//                RoleEnum.YU_YAN_JIA, RoleEnum.NV_WU, RoleEnum.LIE_REN));
+//
+//        // 10人
+//        gameBooks.add(new GameBook("预|女|猎|白|3民|3狼",
+//                RoleEnum.PING_MING, RoleEnum.PING_MING, RoleEnum.PING_MING,
+//                RoleEnum.LANG_REN, RoleEnum.LANG_REN, RoleEnum.LANG_REN,
+//                RoleEnum.YU_YAN_JIA, RoleEnum.NV_WU, RoleEnum.LIE_REN, RoleEnum.BAI_CHI));
+//
+//        // 11人
+//        gameBooks.add(new GameBook("预|女|猎|4民|4狼",
+//                RoleEnum.PING_MING, RoleEnum.PING_MING, RoleEnum.PING_MING, RoleEnum.PING_MING,
+//                RoleEnum.LANG_REN, RoleEnum.LANG_REN, RoleEnum.LANG_REN, RoleEnum.LANG_REN,
+//                RoleEnum.YU_YAN_JIA, RoleEnum.NV_WU, RoleEnum.LIE_REN));
 
         // 12人
         gameBooks.add(new GameBook("预|女|猎|守|4民|4狼",
@@ -105,7 +105,22 @@ public class GameBookRepositoryImpl implements GameBookRepository {
                 RoleEnum.LANG_REN, RoleEnum.LANG_REN, RoleEnum.LANG_REN, RoleEnum.LANG_REN,
                 RoleEnum.YU_YAN_JIA, RoleEnum.NV_WU, RoleEnum.LIE_REN, RoleEnum.BAI_CHI, RoleEnum.LAO_LIU_MANG));
 
+        gameBooks.add(new GameBook("预|女|猎|摄|野|4民|3狼|黑狼",
+                RoleEnum.PING_MING, RoleEnum.PING_MING, RoleEnum.PING_MING, RoleEnum.PING_MING,
+                RoleEnum.LANG_REN, RoleEnum.LANG_REN, RoleEnum.LANG_REN, RoleEnum.HEI_LANG_WANG,
+                RoleEnum.YU_YAN_JIA, RoleEnum.NV_WU, RoleEnum.LIE_REN, RoleEnum.SHE_MENG_REN, RoleEnum.YE_HAI_ZI));
+
         // 14人
+        gameBooks.add(new GameBook("预|女|猎|摄|丘|野|4民|3狼|黑狼",
+                RoleEnum.PING_MING, RoleEnum.PING_MING, RoleEnum.PING_MING, RoleEnum.PING_MING,
+                RoleEnum.LANG_REN, RoleEnum.LANG_REN, RoleEnum.LANG_REN, RoleEnum.HEI_LANG_WANG,
+                RoleEnum.YU_YAN_JIA, RoleEnum.NV_WU, RoleEnum.LIE_REN, RoleEnum.SHE_MENG_REN, RoleEnum.QIU_BI_TE, RoleEnum.YE_HAI_ZI));
+
+        gameBooks.add(new GameBook("通|女|猎|守|丘|野|4民|3狼|机械狼",
+                RoleEnum.PING_MING, RoleEnum.PING_MING, RoleEnum.PING_MING, RoleEnum.PING_MING,
+                RoleEnum.LANG_REN, RoleEnum.LANG_REN, RoleEnum.LANG_REN, RoleEnum.JI_XIE_LANG,
+                RoleEnum.TONG_LING_SHI, RoleEnum.NV_WU, RoleEnum.LIE_REN, RoleEnum.SHOU_WEI, RoleEnum.QIU_BI_TE, RoleEnum.YE_HAI_ZI));
+
         gameBooks.add(new GameBook("预|女|猎|白|4民|4狼|老流氓|炸弹人",
                 RoleEnum.PING_MING, RoleEnum.PING_MING, RoleEnum.PING_MING, RoleEnum.PING_MING,
                 RoleEnum.LANG_REN, RoleEnum.LANG_REN, RoleEnum.LANG_REN, RoleEnum.LANG_REN,
@@ -139,27 +154,27 @@ public class GameBookRepositoryImpl implements GameBookRepository {
                 RoleEnum.YU_YAN_JIA, RoleEnum.NV_WU, RoleEnum.LIE_REN, RoleEnum.BAI_CHI, RoleEnum.SHE_MENG_REN
         ));
 
-        // 动物梦境
-        // 10人
-        gameBooks.add(new GameBook("2狼|美|4羊|豚|狐|熊",
-                RoleEnum.LANG, RoleEnum.LANG,
-                RoleEnum.MEI, RoleEnum.HE_TUN, RoleEnum.ZI_HU, RoleEnum.XIONG,
-                RoleEnum.YANG_TUO, RoleEnum.YANG_TUO, RoleEnum.YANG_TUO, RoleEnum.YANG_TUO));
-
-        // 12人
-        gameBooks.add(new GameBook("3狼|美|4羊|白|豚|狐|熊",
-                RoleEnum.LANG, RoleEnum.LANG, RoleEnum.LANG,
-                RoleEnum.MEI, RoleEnum.BAI_MAO, RoleEnum.HE_TUN, RoleEnum.ZI_HU, RoleEnum.XIONG,
-                RoleEnum.YANG_TUO, RoleEnum.YANG_TUO, RoleEnum.YANG_TUO, RoleEnum.YANG_TUO));
-
-        // 休闲
-        // 10人
-        gameBooks.add(new GameBook("预|女|3猎|厚狼|2民|2狼狼",
-                RoleEnum.PING_MING, RoleEnum.PING_MING,
-                RoleEnum.LANG_LANG, RoleEnum.LANG_LANG,
-                RoleEnum.HOU_LANG,
-                RoleEnum.YU_YAN_JIA, RoleEnum.NV_WU,
-                RoleEnum.LIE_REN, RoleEnum.LIE_REN, RoleEnum.LIE_REN));
+//        // 动物梦境
+//        // 10人
+//        gameBooks.add(new GameBook("2狼|美|4羊|豚|狐|熊",
+//                RoleEnum.LANG, RoleEnum.LANG,
+//                RoleEnum.MEI, RoleEnum.HE_TUN, RoleEnum.ZI_HU, RoleEnum.XIONG,
+//                RoleEnum.YANG_TUO, RoleEnum.YANG_TUO, RoleEnum.YANG_TUO, RoleEnum.YANG_TUO));
+//
+//        // 12人
+//        gameBooks.add(new GameBook("3狼|美|4羊|白|豚|狐|熊",
+//                RoleEnum.LANG, RoleEnum.LANG, RoleEnum.LANG,
+//                RoleEnum.MEI, RoleEnum.BAI_MAO, RoleEnum.HE_TUN, RoleEnum.ZI_HU, RoleEnum.XIONG,
+//                RoleEnum.YANG_TUO, RoleEnum.YANG_TUO, RoleEnum.YANG_TUO, RoleEnum.YANG_TUO));
+//
+//        // 休闲
+//        // 10人
+//        gameBooks.add(new GameBook("预|女|3猎|厚狼|2民|2狼狼",
+//                RoleEnum.PING_MING, RoleEnum.PING_MING,
+//                RoleEnum.LANG_LANG, RoleEnum.LANG_LANG,
+//                RoleEnum.HOU_LANG,
+//                RoleEnum.YU_YAN_JIA, RoleEnum.NV_WU,
+//                RoleEnum.LIE_REN, RoleEnum.LIE_REN, RoleEnum.LIE_REN));
 
         // 12人
         gameBooks.add(new GameBook("女|预|猎|白|摄|乌|丘|暗|噩|蚀时狼妃|狼巫|狼王",
