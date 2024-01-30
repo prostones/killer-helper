@@ -7,6 +7,7 @@
 <a target="_blank" href="https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html">
     <img src="https://img.shields.io/badge/JDK-8+-green.svg" />
 </a>
+<img src="https://img.shields.io/badge/Zulu%20JDK-8-green" >
 <img src="https://img.shields.io/badge/Spring%20Boot-2.5.6-green.svg" >
 <img src="https://img.shields.io/badge/Redis-5.0-green.svg" >
 <img src="https://img.shields.io/badge/npm-6.14-green.svg" >
