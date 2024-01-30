@@ -13,6 +13,10 @@
 <img src="https://img.shields.io/badge/npm-6.14-green.svg" >
 <img src="https://img.shields.io/docker/v/pro4stones/killer-helper?sort=semver" >
 
+<a target="_blank" href="http://alphahowler.sumscopeboardgameclub.xyz">
+    <img src="https://img.shields.io/website?url=http://alphahowler.sumscopeboardgameclub.xyz" />
+</a>
+
 ---
 
 ![](.readme_images/c2fd6.gif)
