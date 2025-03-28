@@ -8,7 +8,6 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.UUID;
 
 @Data
 public class GameBook implements Serializable {
@@ -29,7 +28,8 @@ public class GameBook implements Serializable {
     public String getId() {
 
         if (StrUtil.isBlankOrUndefined(id)) {
-            id = UUID.randomUUID().toString().replace("-", "").toLowerCase();
+            // id = UUID.randomUUID().toString().replace("-", "").toLowerCase();
+            id = String.valueOf(title.hashCode());
         }
 
         return id;
