@@ -24,7 +24,7 @@ jobs:
             - ~/.m2/repository
   mydeploy:
     docker:
-      - image: docker:19.03.12
+      - image: cimg/openjdk:17.0
     steps:
       - setup_remote_docker:
           version: 19.03.12
@@ -37,6 +37,14 @@ jobs:
       - run:
           name: Execute build script
           command: ./build.sh
+  deploy:
+    docker:
+      - image: cimg/base:current
+    steps:
+      - checkout
+      - run:
+          name: Placeholder for deploy steps
+          command: echo "Add deploy steps here"
 workflows:
   build-and-test:
     jobs:
@@ -44,3 +52,6 @@ workflows:
       - mydeploy:
           requires:
             - test-java
+      - deploy:
+          requires:
+            - mydeploy
