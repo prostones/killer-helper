@@ -22,7 +22,7 @@ jobs:
           key: cache-{{ checksum "/tmp/CIRCLECI_CACHE_KEY" }}
           paths:
             - ~/.m2/repository
-  deploy:
+  mydeploy:
     docker:
       - image: docker:19.03.12
     steps:
@@ -41,6 +41,6 @@ workflows:
   build-and-test:
     jobs:
       - test-java
-      - deploy:
+      - mydeploy:
           requires:
             - test-java
