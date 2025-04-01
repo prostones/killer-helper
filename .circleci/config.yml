@@ -26,6 +26,8 @@ jobs:
     docker:
       - image: cimg/base:stable
     steps:
+      - setup_remote_docker:
+          version: 19.03.12
       - checkout
       - run:
           name: Grant execute permissions to build.sh
