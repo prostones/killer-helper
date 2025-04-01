@@ -24,7 +24,7 @@ jobs:
           destination: node-build
   test-java:
     docker:
-      - image: azul/zulu-openjdk:8
+      - image: cimg/openjdk:17.0
     steps:
       - checkout
       - run:
