@@ -5,7 +5,7 @@ jobs:
   test-java:
     docker:
       - image: cimg/openjdk:17.0
-    steps:
+    steps: 
       - checkout
       - run:
           name: Calculate cache key
