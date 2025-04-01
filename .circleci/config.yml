@@ -28,6 +28,9 @@ jobs:
     steps:
       - checkout
       - run:
+          name: Grant execute permissions to build.sh
+          command: chmod +x build.sh
+      - run:
           name: Execute build script
           command: ./build.sh
 workflows:
