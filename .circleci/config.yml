@@ -1,11 +1,8 @@
-# This config was automatically generated from your source code
-# Stacks detected: deps:java:.,deps:node:web
 version: 2.1
 orbs:
   node: circleci/node@5
 jobs:
   build-node:
-    # Build node project
     executor: node/default
     working_directory: ~/project/web
     steps:
@@ -19,7 +16,6 @@ jobs:
       - run:
           name: Create the ~/artifacts directory if it doesn't exist
           command: mkdir -p ~/artifacts
-      # Copy output to artifacts dir
       - run:
           name: Copy artifacts
           command: cp -R build dist public .output .next .docusaurus ~/artifacts 2>/dev/null || true
@@ -28,7 +24,7 @@ jobs:
           destination: node-build
   test-java:
     docker:
-      - image: cimg/openjdk:17.0
+      - image: azul/zulu-openjdk:8
     steps:
       - checkout
       - run:
@@ -47,11 +43,9 @@ jobs:
           paths:
             - ~/.m2/repository
   deploy:
-    # This is an example deploy job, not actually used by the workflow
     docker:
       - image: cimg/base:stable
     steps:
-      # Replace this with steps to deploy to users
       - run:
           name: deploy
           command: '#e.g. ./deploy.sh'
@@ -62,6 +56,3 @@ workflows:
           requires:
             - test-java
       - test-java
-    # - deploy:
-    #     requires:
-    #       - build-node
