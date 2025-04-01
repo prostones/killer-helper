@@ -24,7 +24,7 @@ jobs:
             - ~/.m2/repository
   deploy:
     docker:
-      - image: cimg/base:stable
+      - image: docker:19.03.12
     steps:
       - setup_remote_docker:
           version: 19.03.12
