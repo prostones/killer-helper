@@ -27,6 +27,7 @@ jobs:
       - image: cimg/openjdk:17.0
     steps:
       - checkout
+      - setup_remote_docker
       - attach_workspace:
           at: .
       - run:
