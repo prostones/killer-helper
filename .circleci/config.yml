@@ -14,7 +14,7 @@ jobs:
       - run:
           command: npm run build
       - run:
-          name: Create the ~/artifacts directory if it doesn't存在
+          name: Create the ~/artifacts directory if it doesn't exist
           command: mkdir -p ~/artifacts
       - run:
           name: Copy artifacts
